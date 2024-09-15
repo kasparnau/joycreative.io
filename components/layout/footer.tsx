@@ -19,10 +19,10 @@ const Footer = () => {
         {/* Footer Content */}
         <Container className="w-full mt-8 grid">
           {/* Logo */}
-          <div className="flex flex-col gap-4">
+          <a href="./" className="flex flex-col gap-5">
             <Image alt="" src={Logo} width={20} />
             <p className="text-sm font-semibold">Creating future nostalgia</p>
-          </div>
+          </a>
         </Container>
 
         {/* Footer Text SVG */}
