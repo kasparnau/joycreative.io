@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
 
+import Footer from "@/components/layout/footer";
 import { GeistSans } from "geist/font/sans";
+import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,7 +20,9 @@ export default function RootLayout({
       <body
         className={`min-h-screen bg-background text-foreground antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
