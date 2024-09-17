@@ -8,5 +8,7 @@
     --foreground: 0 0% 100%;
     --primary: 347 77% 50%;
     --card: 0 0% 5%;
+    --muted: 240 5% 26%;
+    --muted-foreground: 240 5% 65%;
   }
 }

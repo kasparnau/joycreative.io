@@ -14,11 +14,9 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: "hsl(var(--primary))",
         card: "hsl(var(--card))",
-
-        // Tailwind-inherited colors
         muted: {
-          DEFAULT: colors.zinc[700],
-          foreground: colors.zinc[400],
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
       },
     },
