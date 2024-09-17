@@ -11,5 +11,7 @@
     --card: 0 0% 5%;
     --muted: 240 5% 26%;
     --muted-foreground: 240 5% 65%;
+
+    --border-radius-card: 0.5rem;
   }
 }

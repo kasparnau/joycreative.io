@@ -19,6 +19,9 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
       },
+      borderRadius: {
+        card: "var(--border-radius-card)",
+      },
     },
   },
   plugins: [],
