@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "black",
-        foreground: "white",
+        // Custom colors
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: "hsl(var(--primary))",
+        card: "hsl(var(--card))",
+
+        // Tailwind-inherited colors
         muted: {
           DEFAULT: colors.zinc[700],
           foreground: colors.zinc[400],
