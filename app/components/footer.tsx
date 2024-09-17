@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import FooterBlur from "./footer-blur";
 import FooterSvg from "@/public/assets/footer-text.svg";
 import Image from "next/image";
 import Logo from "@/public/assets/logo.svg";
@@ -8,18 +9,12 @@ const Footer = () => {
     <div>
       <footer className={`w-full relative overflow-hidden flex flex-col z-0`}>
         {/* Radial Background Blur */}
-        <div
-          className="absolute h-[900px] top-[-450px] z-[-1] opacity-30 w-full"
-          style={{
-            background:
-              "radial-gradient(50% 50% at 50% 50%, rgb(255 0 92 / 80%) 0%, rgba(255, 255, 255, 0) 100%)",
-          }}
-        />
+        <FooterBlur />
 
         {/* Footer Content */}
         <Container className="w-full mt-8 grid">
           {/* Logo */}
-          <a href="./" className="flex flex-col gap-5">
+          <a href="./" className="flex flex-col gap-5 font-semibold">
             <Image alt="" src={Logo} width={20} />
             <p className="text-sm font-semibold">Creating future nostalgia</p>
           </a>

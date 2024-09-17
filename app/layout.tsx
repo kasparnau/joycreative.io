@@ -1,9 +1,8 @@
 import "@/styles/globals.css";
 
-import Footer from "@/components/layout/footer";
-import { GeistMono } from "geist/font/mono";
+import Footer from "./components/footer";
 import { GeistSans } from "geist/font/sans";
-import Header from "@/components/layout/header";
+import Header from "./components/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
