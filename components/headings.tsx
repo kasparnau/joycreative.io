@@ -8,7 +8,8 @@ export type Heading = { children?: ReactNode; className?: string };
 
 const config: Config = {
   h1: "text-6xl font-medium text-foreground tracking-tight",
-  h2: "text-lg text-foreground/60 leading-8",
+  h2: "text-4xl font-medium text-foreground tracking-tight",
+  h3: "text-lg text-foreground/60 leading-8",
 };
 
 const MakeHeading = (style: string) => {
