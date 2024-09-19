@@ -45,7 +45,7 @@ const Glows = {
           bottom: "0px",
           left: "0px",
           right: "0px",
-          mask: "radial-gradient(90% 90% at 50% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%)",
+          mask: "radial-gradient(90% 90% at 50% 70%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 100%)",
           background:
             "linear-gradient(rgb(255 255 255 / 0%) 0%, rgb(255, 0, 92) 100%)",
         }}
@@ -58,7 +58,7 @@ const Glows = {
           bottom: "0px",
           left: "0px",
           right: "0px",
-          mask: "radial-gradient(50% 100% at 50% 30%, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 35%) 65%, rgb(0 0 0 / 100%) 100%) add",
+          mask: "radial-gradient(50% 130% at 50% 30%, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 35%) 65%, rgb(0 0 0 / 100%) 100%) add",
           background:
             "linear-gradient(rgb(255 255 255 / 0%) 0%, rgb(255 0 68 / 70%) 100%)",
         }}

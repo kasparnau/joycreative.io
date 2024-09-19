@@ -44,7 +44,9 @@ const HeroGlow: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
         opacity: opacity,
         transform: translateY,
       }}
-      transition={{ easing: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 5, delay: 1, easing: "easeOut" }}
     >
       <Glows.Bottom />
     </motion.div>
@@ -98,7 +100,7 @@ const HeroContent: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
             variants={{
               visible: { opacity: 1 },
               hidden: { opacity: 0 },
