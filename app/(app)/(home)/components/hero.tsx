@@ -75,10 +75,10 @@ const HeroContent: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
 
   return (
     <>
-      <Container className="w-full flex items-center justify-between">
+      <Container className="w-full flex items-center justify-between pt-24">
         <div className="w-full flex flex-col">
           <motion.div
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-[120px] font-bold text-nowrap"
+            className="text-4xl sm:text-7xl lg:text-[120px] font-bold text-nowrap"
             transition={{ duration: 0.3 }}
             initial={{ translateX: -1000, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
@@ -86,7 +86,7 @@ const HeroContent: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
             We make games
           </motion.div>
           <motion.div
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-[120px] font-bold text-nowrap relative lg:left-[33%]"
+            className="text-4xl sm:text-7xl lg:text-[120px] font-bold text-nowrap relative lg:left-[33%]"
             initial={{ translateX: 1000, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
@@ -142,7 +142,8 @@ const Hero = () => {
 
   return (
     <div
-      className="w-full flex flex-col relative overflow-hidden pt-32 min-h-screen"
+      // Minimum height is accounting for the header navbar height of 80px
+      className="w-full flex flex-col relative overflow-hidden pt-8 min-h-[calc(100vh_-_80px)]"
       ref={containerRef}
     >
       <HeroContent springScrollProgress={springScrollProgress} />

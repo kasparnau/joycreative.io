@@ -21,8 +21,8 @@ const CallToAction = () => {
             collaborate?
           </Headings.h1>
           <Headings.h3 className="max-w-sm">
-            Want to bring your great idea to life? Drop a message — we'll help
-            you out.
+            Have a great idea & want to bring it to life? Drop a message — we'll
+            help you out.
           </Headings.h3>
           <div className="flex gap-2 mt-2">
             <button className="rounded-card px-5 py-2 bg-foreground hover:bg-foreground/90 transition-colors text-muted w-fit text-md font-medium shadow-extra">

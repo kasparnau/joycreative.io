@@ -1,10 +1,45 @@
-import Container from "@/components/container";
+"use client";
 
-const Header = () => {
+import Container from "@/components/container";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "@/public/assets/logo.svg";
+import { motion } from "framer-motion";
+import useIsScrolled from "@/lib/is-scrolled-hook";
+
+const HomeButton = ({ className }: { className?: string }) => {
   return (
-    <nav className="w-full">
-      <Container>Joy Creative</Container>
-    </nav>
+    <Link key="/" href="/" className={className}>
+      <motion.div
+        initial={{ scale: 1.0 }}
+        whileHover={{
+          scale: 1.05,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeOut",
+        }}
+      >
+        {/* Light theme*/}
+        <Image src={Logo} alt="Joy Creative" width={40} quality={100} />
+      </motion.div>
+    </Link>
+  );
+};
+const Header = () => {
+  const isScrolled = useIsScrolled();
+  return (
+    <header
+      className={`w-full sticky top-0 z-20 flex justify-center items-center border-foreground/5 transition-colors backdrop-blur-lg
+    ${isScrolled && `border-b bg-background/10`}
+`}
+    >
+      <Container className="w-full">
+        <div className="h-20 grid grid-cols-2 lg:grid-cols-3 w-full">
+          <HomeButton className="justify-self-start flex items-center" />
+        </div>
+      </Container>
+    </header>
   );
 };
 
