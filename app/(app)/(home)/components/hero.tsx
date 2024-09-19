@@ -110,7 +110,7 @@ const HeroContent: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
         </div>
       </Container>
       <motion.div
-        className=" absolute right-0 xl:right-36 -bottom-12"
+        className=" absolute right-0 xl:right-36 -bottom-10"
         initial={{ translateY: 50 }}
         animate={{ translateY: 0 }}
         transition={{ duration: 0.3 }}
