@@ -1,4 +1,5 @@
 import Border from "./header-border";
+import { Button } from "@/components/button";
 import Container from "@/components/container";
 import HomeButton from "./header-home-button";
 import { Menu } from "lucide-react";
@@ -43,8 +44,16 @@ const Header = () => {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-self-end">
-            <Menu size={30} />
+
+          <div className="justify-self-end">
+            {/* Contact button on desktop*/}
+            <Button variant="glass" className="hidden lg:block rounded-full">
+              Contact Us
+            </Button>
+            {/* Hamburger menu on mobile */}
+            <div className="lg:hidden flex items-center justify-self-end">
+              <Menu size={30} />
+            </div>
           </div>
         </div>
       </Container>
