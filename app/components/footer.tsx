@@ -17,9 +17,12 @@ const Footer = () => {
       {/* Footer Content */}
       <Container className="w-full mt-8 grid">
         {/* Logo */}
-        <a href="./" className="flex flex-col gap-5 font-semibold">
+        <a href="./" className="flex flex-col gap-5">
           <Image alt="" src={Logo} width={20} />
-          <p className="text-sm font-semibold">Creating future nostalgia</p>
+          <p className="text-md text-zinc-50 max-w-xs">
+            Independent creative studio building digital experiences and pushing
+            the boundaries.
+          </p>
         </a>
       </Container>
 
