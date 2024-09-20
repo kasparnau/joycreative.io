@@ -5,7 +5,7 @@
 /* Theme */
 @layer base {
   :root {
-    --background: 240 5% 4%;
+    --background: 60 5% 8%;
     --foreground: 0 0% 100%;
     --primary: 347 77% 50%;
     --card: 0 0% 5%;
