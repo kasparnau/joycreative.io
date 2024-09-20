@@ -2,6 +2,7 @@ import Border from "./header-border";
 import { Button } from "@/components/button";
 import Container from "@/components/container";
 import HomeButton from "./header-home-button";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
@@ -47,8 +48,12 @@ const Header = () => {
 
           <div className="justify-self-end">
             {/* Contact button on desktop*/}
-            <Button variant="glass" className="hidden lg:block rounded-full">
-              Contact Us
+            <Button
+              asChild
+              variant="glass"
+              className="hidden lg:block rounded-full"
+            >
+              <Link href="/contact">Contact Us</Link>
             </Button>
             {/* Hamburger menu on mobile */}
             <div className="lg:hidden flex items-center justify-self-end">
