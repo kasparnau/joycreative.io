@@ -1,6 +1,7 @@
 import Border from "./header-border";
 import Container from "@/components/container";
 import HomeButton from "./header-home";
+import { Menu } from "lucide-react";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
@@ -42,7 +43,9 @@ const Header = () => {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-self-end"></div>
+          <div className="flex items-center justify-self-end">
+            <Menu size={30} />
+          </div>
         </div>
       </Container>
 
