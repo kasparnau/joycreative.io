@@ -1,8 +1,6 @@
+import { getViewportHeight } from "@/app/components/header";
 import { twMerge } from "tailwind-merge";
-import { viewportHeight } from "@/lib/viewport-height";
 
 export default function Contact({}) {
-  return (
-    <main className={twMerge("w-full", viewportHeight)}>{viewportHeight}</main>
-  );
+  return <main className={twMerge("w-full", getViewportHeight())}></main>;
 }

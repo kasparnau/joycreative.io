@@ -4,9 +4,9 @@ import HeroBorder from "./hero-border";
 import HeroBrands from "./hero-brands";
 import HeroContent from "./hero-content";
 import HeroGlow from "./hero-glow";
+import { getViewportHeight } from "@/app/components/header";
 import { twMerge } from "tailwind-merge";
 import { useRef } from "react";
-import { viewportHeight } from "@/lib/viewport-height";
 
 export const useOpacityTransform = (springScrollProgress: MotionValue) =>
   useTransform(springScrollProgress, [0, 1], [1, 0]);
@@ -30,7 +30,7 @@ const Hero = () => {
       // Minimum height accounting for the header navbar height of 80px
       className={twMerge(
         "w-full flex flex-col relative overflow-hidden",
-        viewportHeight,
+        getViewportHeight(),
       )}
       ref={containerRef}
     >
