@@ -8,7 +8,7 @@ interface Props {
 }
 const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
   return (
-    <Container className="sm:pt-32 w-full flex items-center justify-center">
+    <Container className="pt-8 sm:pt-32 w-full flex items-center justify-center">
       <div className="w-full flex flex-col">
         <motion.div
           className="text-5xl sm:text-7xl lg:text-[120px] font-bold"
