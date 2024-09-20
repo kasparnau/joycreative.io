@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import Image from "next/image";
-import { platforms } from "../data";
+import platforms from "../data/platforms";
 import { useMemo } from "react";
 
 const PlatformIcons = () => {
