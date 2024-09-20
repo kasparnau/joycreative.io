@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="" src="https://github.com/user-attachments/assets/022dab36-07c8-49fd-801d-6cac74b41ed6"/>
+  <img alt="" src="https://github.com/user-attachments/assets/8fc10d87-774c-4290-84aa-7efedcbf5422"/>
 </p>
 
 <h1 align="center">Joy Creative</h1>
