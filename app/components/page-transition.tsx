@@ -40,7 +40,7 @@ const Column = ({ column }: { column: number }) => {
         return (
           <motion.div
             key={`${column}-${row}`}
-            className={`relative h-full w-full`}
+            className={`relative h-full w-full min-w-40`}
             {...anim()}
           />
         );
