@@ -30,7 +30,7 @@ interface HeroBorderProps {
 }
 
 const HeroGlow: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
-  const animLength = 5;
+  const animLength = 3;
 
   // Initial animation on page load
   const controls = useAnimation();
@@ -40,14 +40,14 @@ const HeroGlow: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
   useEffect(() => {
     controls.start({
       opacity: 1,
-      transition: { duration: animLength, delay: loaderData.animLength + 1 },
+      transition: { duration: animLength, delay: loaderData.animLength },
     });
 
     const timeout = setTimeout(
       () => {
         setInitialAnimationFinished(true);
       },
-      (loaderData.animLength + animLength + 2) * 1000,
+      (loaderData.animLength + animLength + 1) * 1000,
     );
 
     return () => clearTimeout(timeout);
