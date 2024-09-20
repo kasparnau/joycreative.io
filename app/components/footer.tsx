@@ -1,9 +1,9 @@
 import Container from "@/components/container";
 import FooterBlur from "./footer-blur";
-import FooterGradient from "@/public/assets/footer-gradient.png";
-import FooterSvg from "@/public/assets/footer-text.svg";
+import FooterGradient from "@/public/assets/footer/footer-gradient.png";
+import FooterSvg from "@/public/assets/footer/footer-text.svg";
 import Image from "next/image";
-import Logo from "@/public/assets/logo.svg";
+import Logo from "@/public/assets/company/logo.svg";
 
 const Footer = () => {
   return (

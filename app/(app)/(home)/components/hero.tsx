@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Container from "@/components/container";
 import Glows from "./glow-components";
-import HandHoldingImg from "@/public/assets/holding-phone.png";
+import HandHoldingImg from "@/public/assets/hero/holding-phone.png";
 import PlatformIcons from "./platform-icons";
 import easings from "@/lib/easings";
 import { data as loaderData } from "@/app/(transition)/loader";

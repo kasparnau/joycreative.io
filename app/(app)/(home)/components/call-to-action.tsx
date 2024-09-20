@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import CtaGraphic from "@/public/assets/cta-graphic.svg";
+import CtaGraphic from "@/public/assets/cta/cta-graphic.svg";
 import Glows from "./glow-components";
 import Headings from "@/components/headings";
 

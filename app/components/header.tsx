@@ -3,7 +3,7 @@
 import Container from "@/components/container";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/assets/logo.svg";
+import Logo from "@/public/assets/company/logo.svg";
 import { motion } from "framer-motion";
 import useIsScrolled from "@/lib/is-scrolled-hook";
 
