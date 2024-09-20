@@ -42,7 +42,7 @@ const Header = () => {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-self-end">HAMBURGER</div>
+          <div className="flex items-center justify-self-end"></div>
         </div>
       </Container>
 
