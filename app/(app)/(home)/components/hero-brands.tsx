@@ -24,11 +24,16 @@ const PlatformIcons = () => {
   );
 
   return (
-    <div className="w-full opacity-60 absolute bottom-4 hidden lg:block z-[0]">
+    <motion.div
+      className="w-full opacity-60 absolute bottom-4 hidden lg:block z-[0]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: easings.easeInOutQuint }}
+    >
       <div className="flex items-center justify-start gap-16 flex-wrap">
         {icons}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
