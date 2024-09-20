@@ -60,9 +60,9 @@ const Transition = () => {
 
 export default function Loader({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <>
       <Transition />
       {children}
-    </div>
+    </>
   );
 }
