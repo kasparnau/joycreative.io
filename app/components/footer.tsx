@@ -21,7 +21,7 @@ const Footer = () => {
           <Image alt="" src={Logo} width={20} />
           <p className="text-md text-zinc-50 max-w-xs">
             Independent creative studio building digital experiences and pushing
-            the boundaries.
+            boundaries.
           </p>
         </a>
       </Container>
