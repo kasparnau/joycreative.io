@@ -17,6 +17,8 @@ import HandHoldingImg from "@/public/assets/hero/holding-phone.png";
 import PlatformIcons from "./platform-icons";
 import easings from "@/lib/easings";
 import { data as loaderData } from "@/app/(transition)/loader";
+import { navHeight } from "@/app/components/header";
+import { twMerge } from "tailwind-merge";
 
 const useOpacityTransform = (springScrollProgress: MotionValue) =>
   useTransform(springScrollProgress, [0, 1], [1, 0]);
@@ -165,6 +167,10 @@ const HeroBrands: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
   );
 };
 
+// Container should fill the rest of the viewport height after the header
+// Container should be capped after a certain point to account for large (1440p/2160p) displays.
+const heroContainerSize = `h-[calc(100vh_-_${navHeight})] max-h-[1000px]`;
+
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -182,7 +188,10 @@ const Hero = () => {
   return (
     <div
       // Minimum height accounting for the header navbar height of 80px
-      className="w-full flex flex-col relative overflow-hidden h-[calc(100vh_-_80px)] max-h-[1000px]"
+      className={twMerge(
+        "w-full flex flex-col relative overflow-hidden",
+        heroContainerSize,
+      )}
       ref={containerRef}
     >
       <HeroContent springScrollProgress={springScrollProgress} />
