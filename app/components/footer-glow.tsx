@@ -1,4 +1,4 @@
-const FooterBlur = () => (
+const FooterGlow = () => (
   <div
     className="absolute h-[900px] top-[-450px] z-[-1] opacity-30 w-full"
     style={{
@@ -8,4 +8,4 @@ const FooterBlur = () => (
   />
 );
 
-export default FooterBlur;
+export default FooterGlow;

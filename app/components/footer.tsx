@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import FooterBlur from "./footer-blur";
+import FooterBlur from "./footer-glow";
 import FooterGradient from "@/public/assets/footer/footer-gradient.png";
 import FooterSvg from "@/public/assets/footer/footer-text.svg";
 import Image from "next/image";

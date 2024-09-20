@@ -1,28 +1,8 @@
+import Border from "./header-border";
 import Container from "@/components/container";
-import HomeButton from "./home-button";
-import Link from "next/link";
-import { ReactNode } from "react";
+import HomeButton from "./header-home";
+import NavLink from "./header-link";
 import { twMerge } from "tailwind-merge";
-
-const Border: React.FC = () => {
-  return (
-    <div className="w-full absolute bottom-0 flex justify-center">
-      <div
-        className="h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"
-        style={{ width: "50%" }}
-      />
-    </div>
-  );
-};
-
-const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
-  <Link
-    className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-    href={href}
-  >
-    {children}
-  </Link>
-);
 
 // 🤷🏻 This is exposed for our hero page to dynamically fill the rest of the viewport. 🤔
 export const navHeight = "6rem";

@@ -13,12 +13,14 @@ const HomeButton = ({ className }: { className?: string }) => {
         whileHover={{
           scale: 1.05,
         }}
+        whileTap={{
+          scale: 0.95,
+        }}
         transition={{
           duration: 0.3,
           ease: "easeOut",
         }}
       >
-        {/* Light theme*/}
         <div className="h-full flex items-center gap-2">
           <Image src={Logo} alt="Joy Creative" width={20} quality={100} />
           <p className="font-semibold text-lg">Joy Creative</p>

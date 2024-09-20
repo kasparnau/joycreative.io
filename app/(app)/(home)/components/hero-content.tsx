@@ -1,5 +1,3 @@
-"use client";
-
 import { MotionValue, motion } from "framer-motion";
 
 import Container from "@/components/container";

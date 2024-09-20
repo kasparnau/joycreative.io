@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import easings from "@/lib/easings";
 import { motion } from "framer-motion";
 
