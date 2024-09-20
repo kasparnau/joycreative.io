@@ -3,6 +3,7 @@ import Container from "@/components/container";
 import CtaGraphic from "@/public/assets/cta/cta-graphic.svg";
 import Glows from "./glow-components";
 import Headings from "@/components/headings";
+import Image from "next/image";
 
 const CallToAction = () => {
   return (
@@ -34,9 +35,11 @@ const CallToAction = () => {
         </div>
 
         {/* Graphic of game development */}
-        <div className="relative h-[600px] w-full">
-          <img
+        <div className="relative h-[595px] w-full">
+          <Image
             alt=""
+            width={1200}
+            height={595}
             src={CtaGraphic.src}
             className="z-[1] min-w-[1200px] absolute left-0"
           />

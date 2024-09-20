@@ -55,8 +55,10 @@ const HeroBrands: React.FC<Props> = ({ springScrollProgress }) => {
           transition={{ duration: 0.3, ease: easings.easeInOutQuint }}
           style={{ opacity: opacity }}
         >
-          <img
+          <Image
             className="object-cover h-[590px]"
+            width={400}
+            height={590}
             alt=""
             src={HandHoldingImg.src}
           />
