@@ -33,14 +33,14 @@ const anim = () => {
   };
 };
 
-const Column = ({ i }: { i: number }) => {
+const Column = ({ column }: { column: number }) => {
   return (
     <div className="flex relative h-full w-full">
       {/* Rows of Boxes*/}
-      {[...Array(data.numRows)].map((_, j) => {
+      {[...Array(data.numRows)].map((_, row) => {
         return (
           <motion.div
-            key={i}
+            key={`${column}-${row}`}
             className={`relative h-full w-full`}
             {...anim()}
           />
@@ -53,6 +53,7 @@ const Column = ({ i }: { i: number }) => {
 const Transition = () => {
   return (
     <motion.div
+      id="transition"
       // Transition starts off with a black background to prevent screen flash from columns of boxes being rendered in.
       initial={{ backgroundColor: "hsl(0 0% 0%)" }}
       animate={{ backgroundColor: "hsl(0 0% 0% / 0%)" }}
@@ -61,7 +62,7 @@ const Transition = () => {
     >
       {/* Columns of Boxes*/}
       {[...Array(data.numColumns)].map((_, i) => (
-        <Column key={i} i={i} />
+        <Column key={i} column={i} />
       ))}
     </motion.div>
   );
