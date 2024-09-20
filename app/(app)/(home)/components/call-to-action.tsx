@@ -2,7 +2,6 @@ import Container from "@/components/container";
 import CtaGraphic from "@/public/assets/cta-graphic.svg";
 import Glows from "./glow-components";
 import Headings from "@/components/headings";
-import Image from "next/image";
 
 const CallToAction = () => {
   return (
@@ -42,15 +41,6 @@ const CallToAction = () => {
             className="z-[1] min-w-[1200px] absolute left-0"
           />
         </div>
-        {/* <Image
-          alt=""
-          src={CtaGraphic}
-          className="w-[1200px] min-h-[600px] h-[600px] z-[1]"
-          style={{
-            // Fade out to the bottom
-            mask: "linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%)",
-          }}
-        /> */}
       </Container>
     </div>
   );
