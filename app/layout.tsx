@@ -6,6 +6,7 @@ import Header from "./components/header";
 import Loader from "./(transition)/loader";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "Joy Creative",
@@ -21,9 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${font.className}`}>
+    <html lang="en">
       <body
-        className={`min-h-screen bg-background text-foreground antialiased flex flex-col`}
+        className={twMerge(
+          `min-h-screen bg-background text-foreground antialiased flex flex-col`,
+          font.className,
+        )}
       >
         <Loader>
           <Header />
