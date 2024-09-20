@@ -1,3 +1,4 @@
+import { Button } from "@/components/button";
 import Container from "@/components/container";
 import CtaGraphic from "@/public/assets/cta/cta-graphic.svg";
 import Glows from "./glow-components";
@@ -24,12 +25,8 @@ const CallToAction = () => {
             help you out.
           </Headings.h3>
           <div className="flex gap-2 mt-2">
-            <button className="rounded-card px-5 py-2 bg-foreground hover:bg-foreground/90 transition-colors text-muted w-fit text-md font-medium shadow-extra">
-              Let's work together
-            </button>
-            <button className="rounded-card px-5 py-2 bg-foreground/10 text-foreground w-fit text-md font-medium">
-              Learn more
-            </button>
+            <Button>Let's work together</Button>
+            <Button variant="glass">Learn more</Button>
           </div>
         </div>
 
