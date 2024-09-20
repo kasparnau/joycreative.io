@@ -21,7 +21,10 @@ const HomeButton = ({ className }: { className?: string }) => {
         }}
       >
         {/* Light theme*/}
-        <Image src={Logo} alt="Joy Creative" width={40} quality={100} />
+        <div className="h-full flex items-center gap-2">
+          <Image src={Logo} alt="Joy Creative" width={16} quality={100} />
+          <p className="font-semibold">Joy Creative</p>
+        </div>
       </motion.div>
     </Link>
   );
