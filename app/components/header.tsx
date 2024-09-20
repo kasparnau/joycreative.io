@@ -34,7 +34,7 @@ const Header = () => {
       )}
     >
       <Container className="w-full">
-        <div className={`grid grid-cols-2 lg:grid-cols-3 w-full`}>
+        <div className={`flex justify-between lg:grid lg:grid-cols-3 w-full`}>
           <HomeButton className="justify-self-start flex items-center" />
           <div className="hidden lg:flex items-center justify-self-center">
             <div className="border border-primary/10 rounded-full flex gap-6 px-7 py-2">
