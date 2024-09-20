@@ -2,6 +2,7 @@ import Border from "./header-border";
 import Container from "@/components/container";
 import HomeButton from "./header-home";
 import NavLink from "./header-link";
+import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
 
 // 🤷🏻 This is exposed for our hero page to dynamically fill the rest of the viewport. 🤔
@@ -18,12 +19,13 @@ const Header = () => {
       <Container className="w-full">
         <div className={`grid grid-cols-2 lg:grid-cols-3 w-full`}>
           <HomeButton className="justify-self-start flex items-center" />
-          <div className="flex items-center justify-self-center">
+          <div className="hidden lg:flex items-center justify-self-center">
             <div className="border border-primary/10 rounded-full flex gap-6 px-7 py-2">
-              <NavLink href="/#games">Work</NavLink>
-              <NavLink href="/#achievements">Achievements</NavLink>
-              <NavLink href="/#collaborate">Collaborate</NavLink>
-              <NavLink href="/contact">Support</NavLink>
+              {headerLinks.map((headerLink) => (
+                <NavLink key={headerLink.url} href={headerLink.url}>
+                  {headerLink.label}
+                </NavLink>
+              ))}
             </div>
           </div>
           <div className="flex items-center justify-self-end">HAMBURGER</div>
