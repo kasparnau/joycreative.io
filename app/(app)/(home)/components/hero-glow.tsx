@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 import Glows from "./glow-components";
 import easings from "@/lib/easings";
-import { data as loaderData } from "@/app/(layout)/transition";
+import { data as loaderData } from "@/app/components/page-transition";
 import { useOpacityTransform } from "./hero";
 
 interface Props {
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const HeroGlow: React.FC<Props> = ({ springScrollProgress }) => {
-  const animLength = 3;
+  const animLength = 2;
 
   // Initial animation on page load
   const controls = useAnimation();
@@ -34,7 +34,7 @@ const HeroGlow: React.FC<Props> = ({ springScrollProgress }) => {
       () => {
         setInitialAnimationFinished(true);
       },
-      (loaderData.animLength + animLength + 1) * 1000,
+      (loaderData.animLength + animLength) * 1000,
     );
 
     return () => clearTimeout(timeout);
