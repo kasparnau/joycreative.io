@@ -23,7 +23,7 @@ const HomeButton = ({ className }: { className?: string }) => {
       >
         <div className="h-full flex items-center gap-2">
           <Image src={Logo} alt="Joy Creative" width={20} quality={100} />
-          <p className="font-semibold text-lg">Joy Creative</p>
+          <p className="font-semibold text-lg text-nowrap">Joy Creative</p>
         </div>
       </motion.div>
     </Link>

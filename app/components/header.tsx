@@ -1,6 +1,6 @@
 import Border from "./header-border";
 import Container from "@/components/container";
-import HomeButton from "./header-home";
+import HomeButton from "./header-home-button";
 import { Menu } from "lucide-react";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
