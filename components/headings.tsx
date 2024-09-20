@@ -12,14 +12,16 @@ const config: Config = {
   h3: "text-md md:text-lg text-muted-foreground leading-8",
 };
 
-const MakeHeading = (style: string) => {
-  return ({ children, className }: Heading) => (
-    <div className={`${style} ${className || ""}`}>{children}</div>
-  );
+const MakeBuildHeading = (style: string) => {
+  function BuildHeading({ children, className }: Heading) {
+    return <div className={`${style} ${className || ""}`}>{children}</div>;
+  }
+
+  return BuildHeading;
 };
 
 const Headings: { [key: string]: React.FC<Heading> } = Object.fromEntries(
-  Object.entries(config).map(([tag, style]) => [tag, MakeHeading(style)]),
+  Object.entries(config).map(([tag, style]) => [tag, MakeBuildHeading(style)]),
 );
 
 export default Headings;
