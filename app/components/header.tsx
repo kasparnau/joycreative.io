@@ -6,21 +6,21 @@ import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
 
-// 🤷🏻 This is so we can scale our pages to take up exactly the remaining viewport height after the header.
+const variants = {
+  md: "h-16 md:h-24",
+};
+
+export const variant = "md";
+
+// 🤷🏻 Utility function to scale pages to occupy the remaining space of the viewport after the header.
 // We need to expose variants for Tailwind to generate utility classes.
 export const viewportVariants = {
-  md: `h-[calc(100vh_-_6rem)] max-h-[1000px]`,
+  md: `h-[calc(100vh_-_4rem)] md:h-[calc(100vh_-_6rem)] max-h-[1000px]`,
 };
 
 export function getViewportHeight() {
   return viewportVariants[variant];
 }
-
-const variants = {
-  md: "h-24",
-};
-
-export const variant = "md";
 // ---------------------------
 
 const Header = () => {
