@@ -14,6 +14,7 @@ const HeroPhone = ({ opacity }: { opacity: MotionValue<number> }) => {
       style={{ opacity: opacity }}
     >
       <Image
+        priority
         className="object-cover h-[590px]"
         width={400}
         height={590}
