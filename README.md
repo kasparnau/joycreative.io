@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://joycreative.io" target="_blank" rel="noopener noreferrer">
+    <img alt="" src="https://github.com/user-attachments/assets/8fc10d87-774c-4290-84aa-7efedcbf5422"/>
+  </a>
+</p>
+
 <h1 align="center">Joy Creative</h1>
 <p align="center">
   <img alt="" src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000">
