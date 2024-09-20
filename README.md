@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://joycreative.io">
+  <a href="https://joycreative.io" target="_blank" rel="noopener noreferrer">
     <img alt="" src="https://github.com/user-attachments/assets/8fc10d87-774c-4290-84aa-7efedcbf5422"/>
   </a>
 </p>
