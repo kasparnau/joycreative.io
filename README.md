@@ -16,6 +16,11 @@
 ## ✨ Features
 
 - ⚡️ Next.js 15 RC with Turbopack
+- 🍿 Animation - Framer Motion
+- 💄 Code Formatting - Prettier
+- 🔨 Commit Convention - Husky & Commitlint
+- 🎨 Styling - Tailwind CSS & Class Variance Authority
+- 🌈 UI Components - Radix Primitives
 
 ## 🔍 Requirements
 
