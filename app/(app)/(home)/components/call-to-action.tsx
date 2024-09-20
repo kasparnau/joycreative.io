@@ -6,7 +6,10 @@ import Headings from "@/components/headings";
 
 const CallToAction = () => {
   return (
-    <div className="w-full flex items-center justify-center overflow-hidden relative mt-64">
+    <div
+      id="collaborate"
+      className="w-full flex items-center justify-center overflow-hidden relative mt-64"
+    >
       {/* Layered Glow Effect */}
       {/* CTA should be on z-2 to be over the blur*/}
       <Glows.MiddleDim />
