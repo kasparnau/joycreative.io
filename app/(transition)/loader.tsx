@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import easings from "@/lib/easings";
 import { motion } from "framer-motion";
 
@@ -32,9 +33,10 @@ const anim = () => {
   };
 };
 
-const Row = ({ i }: { i: number }) => {
+const Column = ({ i }: { i: number }) => {
   return (
     <div className="flex relative h-full w-full">
+      {/* Rows of Boxes*/}
       {[...Array(data.numRows)].map((_, j) => {
         return (
           <motion.div
@@ -50,19 +52,26 @@ const Row = ({ i }: { i: number }) => {
 
 const Transition = () => {
   return (
-    <div className="h-screen w-screen flex flex-col fixed z-50 top-0 left-0 pointer-events-none">
+    <motion.div
+      // Transition starts off with a black background to prevent screen flash from columns of boxes being rendered in.
+      initial={{ backgroundColor: "hsl(0 0% 0%)" }}
+      animate={{ backgroundColor: "hsl(0 0% 0% / 0%)" }}
+      transition={{ duration: 0.1 }}
+      className="h-screen w-screen flex flex-col fixed z-50 top-0 left-0 pointer-events-none"
+    >
+      {/* Columns of Boxes*/}
       {[...Array(data.numColumns)].map((_, i) => (
-        <Row key={i} i={i} />
+        <Column key={i} i={i} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
 export default function Loader({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div>
       <Transition />
       {children}
-    </>
+    </div>
   );
 }
