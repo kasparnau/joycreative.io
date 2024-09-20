@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "3xl": "1800px",
+      },
       colors: {
         // Custom colors
         background: "hsl(var(--background))",
