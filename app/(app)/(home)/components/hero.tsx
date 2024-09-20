@@ -2,21 +2,21 @@
 
 import {
   MotionValue,
-  easeOut,
-  inView,
   motion,
-  useInView,
+  useAnimation,
   useMotionTemplate,
-  useMotionValueEvent,
   useScroll,
   useSpring,
   useTransform,
 } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 import Container from "@/components/container";
 import Glows from "./glow-components";
 import HandHoldingImg from "@/public/assets/holding-phone.png";
-import { useRef } from "react";
+import PlatformIcons from "./platform-icons";
+import easings from "@/lib/easings";
+import { data as loaderData } from "@/app/(transition)/loader";
 
 const useOpacityTransform = (springScrollProgress: MotionValue) =>
   useTransform(springScrollProgress, [0, 1], [1, 0]);
@@ -25,40 +25,65 @@ interface HeroGlowProps {
   springScrollProgress: MotionValue<any>;
 }
 
+interface HeroBorderProps {
+  scrollYProgress: MotionValue<any>;
+}
+
 const HeroGlow: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
-  // Smooth transform animation
+  const animLength = 5;
+
+  // Initial animation on page load
+  const controls = useAnimation();
+  const [initialAnimationFinished, setInitialAnimationFinished] =
+    useState<boolean>(false);
+
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      transition: { duration: animLength, delay: loaderData.animLength + 1 },
+    });
+
+    const timeout = setTimeout(
+      () => {
+        setInitialAnimationFinished(true);
+      },
+      (loaderData.animLength + animLength + 2) * 1000,
+    );
+
+    return () => clearTimeout(timeout);
+  });
+
+  // Glow on scroll animation
   const translateYTransform = useTransform(
     springScrollProgress,
     [0, 1],
     ["0px", "300px"],
   );
   const translateY = useMotionTemplate`translateY(${translateYTransform})`;
-
-  // Smooth offset animation
   const opacity = useOpacityTransform(springScrollProgress);
 
   return (
     <motion.div
-      className="h-full w-full pt-32 absolute bottom-0"
+      className="w-full pt-32 absolute bottom-0 pointer-events-none"
       style={{
-        opacity: opacity,
+        opacity: initialAnimationFinished ? opacity : undefined,
         transform: translateY,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 5, delay: 1, easing: "easeOut" }}
+      transition={{
+        duration: 5,
+        delay: loaderData.animLength,
+        ease: easings.easeInOutQuint,
+      }}
     >
       <Glows.Bottom />
     </motion.div>
   );
 };
 
-interface HeroBorderProps {
-  scrollYProgress: MotionValue<any>;
-}
-
 const HeroBorder: React.FC<HeroBorderProps> = ({ scrollYProgress }) => {
-  // Smooth bottom border animation
+  // Border glow animation
   const borderWithTransform = useTransform(scrollYProgress, [0, 0.7], [100, 0]);
   const borderWidth = useMotionTemplate`${borderWithTransform}%`;
 
@@ -73,58 +98,70 @@ const HeroBorder: React.FC<HeroBorderProps> = ({ scrollYProgress }) => {
 };
 
 const HeroContent: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
+  return (
+    <Container className="sm:pt-32 w-full flex items-center justify-center">
+      <div className="w-full flex flex-col">
+        <motion.div
+          className="text-5xl sm:text-7xl lg:text-[120px] font-bold"
+          transition={{ duration: 0.3, ease: easings.easeInOutQuint }}
+          initial={{ translateX: -1000, opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1 }}
+        >
+          We make games
+        </motion.div>
+        <motion.div
+          className="text-5xl sm:text-7xl lg:text-[120px] font-bold relative lg:left-[25%]"
+          initial={{
+            translateX: 1000,
+            opacity: 0,
+            ease: easings.easeInOutQuint,
+          }}
+          animate={{ translateX: 0, opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+        >
+          people love.
+        </motion.div>
+        <motion.div
+          className="text-md md:text-lg max-w-md text-muted-foreground relative lg:left-[30%] xl:left-[45%] mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2, ease: easings.easeInOutQuint }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+        >
+          Independent creative studio building immersive Metaverse experiences
+          for millions of players.
+        </motion.div>
+      </div>
+    </Container>
+  );
+};
+
+const HeroBrands: React.FC<HeroGlowProps> = ({ springScrollProgress }) => {
   const opacity = useOpacityTransform(springScrollProgress);
 
   return (
-    <>
-      <Container className="w-full flex items-center justify-between pt-24">
-        <div className="w-full flex flex-col">
-          <motion.div
-            className="text-4xl sm:text-7xl lg:text-[120px] font-bold text-nowrap"
-            transition={{ duration: 0.3 }}
-            initial={{ translateX: -1000, opacity: 0 }}
-            animate={{ translateX: 0, opacity: 1 }}
-          >
-            We make games
-          </motion.div>
-          <motion.div
-            className="text-4xl sm:text-7xl lg:text-[120px] font-bold text-nowrap relative lg:left-[33%]"
-            initial={{ translateX: 1000, opacity: 0 }}
-            animate={{ translateX: 0, opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            people love.
-          </motion.div>
-          <motion.div
-            className="text-md md:text-lg max-w-sm text-muted-foreground relative lg:left-[50%] mt-5"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-            variants={{
-              visible: { opacity: 1 },
-              hidden: { opacity: 0 },
-            }}
-          >
-            Independent game studio building immersive Metaverse experiences for
-            millions of players.
-          </motion.div>
-        </div>
+    <div className="w-full absolute bottom-0 z-[0]">
+      <Container className="flex relative">
+        <PlatformIcons />
+        <motion.div
+          className="h-[590px] absolute -bottom-12 right-0"
+          initial={{ translateY: 50 }}
+          animate={{ translateY: 0 }}
+          transition={{ duration: 0.3, ease: easings.easeInOutQuint }}
+          style={{ opacity: opacity }}
+        >
+          <img
+            className="object-cover h-[590px]"
+            alt=""
+            src={HandHoldingImg.src}
+          />
+        </motion.div>
       </Container>
-      <motion.div
-        className=" absolute right-0 xl:right-36 -bottom-10"
-        initial={{ translateY: 50 }}
-        animate={{ translateY: 0 }}
-        transition={{ duration: 0.3 }}
-        style={{ opacity: opacity }}
-      >
-        <img
-          className="w-[400px] min-w-[400px]"
-          alt=""
-          src={HandHoldingImg.src}
-        />
-      </motion.div>
-    </>
+    </div>
   );
 };
 
@@ -134,7 +171,7 @@ const Hero = () => {
   // Scroll progress and scroll progress with spring for animation purposes
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"],
+    offset: ["start", "end 0.3"],
   });
 
   const springScrollProgress = useSpring(scrollYProgress, {
@@ -144,12 +181,13 @@ const Hero = () => {
 
   return (
     <div
-      // Minimum height is accounting for the header navbar height of 80px
-      className="w-full flex flex-col relative overflow-hidden pt-8 min-h-[calc(100vh_-_80px)]"
+      // Minimum height accounting for the header navbar height of 80px
+      className="w-full flex flex-col relative overflow-hidden h-[calc(100vh_-_80px)] max-h-[1000px]"
       ref={containerRef}
     >
       <HeroContent springScrollProgress={springScrollProgress} />
       <HeroGlow springScrollProgress={springScrollProgress} />
+      <HeroBrands springScrollProgress={springScrollProgress} />
       <HeroBorder scrollYProgress={scrollYProgress} />
     </div>
   );

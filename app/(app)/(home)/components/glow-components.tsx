@@ -19,7 +19,7 @@ const Glows = {
       }}
     />
   ),
-  Bottom: ({ children }: { children?: ReactNode }) => (
+  Bottom: () => (
     <div
       className="absolute h-[400px] md:h-[500px] left-0 right-0 bottom-0 z-[2]"
       // Sides
