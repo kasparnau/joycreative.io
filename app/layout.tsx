@@ -1,9 +1,8 @@
 import "@/styles/globals.css";
 
-import Footer from "./components/footer";
-import { GeistSans } from "geist/font/sans";
-import Header from "./components/header";
-import Loader from "./(transition)/loader";
+import Footer from "./(layout)/footer";
+import Header from "./(layout)/header";
+import Loader from "./(layout)/transition";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { twMerge } from "tailwind-merge";
