@@ -1,21 +1,14 @@
-"use client";
-
 import { Github, Menu } from "lucide-react";
 
 import Border from "./header-border";
 import { Button } from "@/components/button";
 import Container from "@/components/container";
+import HeaderBackground from "./header-background";
 import HomeButton from "./header-home-button";
 import Link from "next/link";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
-import useIsScrolled from "@/lib/is-scrolled-hook";
-
-const sizeVariants = {
-  md: "h-16 md:h-20",
-};
-export const variant = "md";
 
 // ? Explanation
 // The header is fixed position.
@@ -25,19 +18,21 @@ export const headerPaddingVariants = {
   md: "pt-16 md:pt-20",
 };
 export const getHeaderPadding = () => headerPaddingVariants[variant];
-// ---------------------------
+
+const sizeVariants = {
+  md: "h-16 md:h-20",
+};
+export const variant = "md";
 
 const Header = () => {
-  const isScrolled = useIsScrolled();
-
   return (
     <header
       className={twMerge(
         `w-full fixed top-0 z-20 flex justify-center items-center backdrop-blur-md transition-colors`,
         sizeVariants[variant],
-        isScrolled ? "bg-black/50" : "bg-transparent",
       )}
     >
+      <HeaderBackground />
       <Container className="w-full">
         <div className={`flex justify-between lg:grid lg:grid-cols-3 w-full`}>
           {/* Home button */}
