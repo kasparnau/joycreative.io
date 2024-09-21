@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // Disable some nauseating animation effects for users who might prefer that.
-export default function prefersReducedMotionHook() {
+export default function usePrefersReducedMotionHook() {
   const [prefersReducedMotion, setPrefersReducedMotion] =
     useState<boolean>(false);
 
