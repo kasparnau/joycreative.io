@@ -1,10 +1,11 @@
 import { MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 
+import HeroBackground from "./hero-background";
 import HeroBorder from "./hero-border";
 import HeroBrands from "./hero-brands";
 import HeroContent from "./hero-content";
 import HeroGlow from "./hero-glow";
-import { getViewportHeight } from "@/app/components/header";
+import { getHeaderPadding } from "@/app/components/header";
 import { twMerge } from "tailwind-merge";
 import { useRef } from "react";
 
@@ -26,18 +27,22 @@ const Hero = () => {
   });
 
   return (
-    <div
-      // Minimum height accounting for the header navbar height of 80px
-      className={twMerge(
-        "w-full flex flex-col relative overflow-hidden",
-        getViewportHeight(),
-      )}
-      ref={containerRef}
-    >
-      <HeroContent springScrollProgress={springScrollProgress} />
-      <HeroGlow springScrollProgress={springScrollProgress} />
-      <HeroBrands springScrollProgress={springScrollProgress} />
-      <HeroBorder scrollYProgress={scrollYProgress} />
+    <div className={"w-full h-screen relative max-h-[1000px]"}>
+      <HeroBackground />
+
+      <div
+        // Minimum height accounting for the header navbar height of 80px
+        className={twMerge(
+          "h-full flex flex-col relative overflow-hidden",
+          getHeaderPadding(),
+        )}
+        ref={containerRef}
+      >
+        <HeroContent springScrollProgress={springScrollProgress} />
+        <HeroGlow springScrollProgress={springScrollProgress} />
+        <HeroBrands springScrollProgress={springScrollProgress} />
+        <HeroBorder scrollYProgress={scrollYProgress} />
+      </div>
     </div>
   );
 };

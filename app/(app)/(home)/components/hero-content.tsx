@@ -31,7 +31,7 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           people love.
         </motion.div>
         <motion.div
-          className="text-md md:text-lg max-w-md text-muted-foreground relative lg:left-[30%] xl:left-[40%] mt-5"
+          className="text-md md:text-lg max-w-md text-muted-foreground relative lg:left-[30%] xl:left-[40%] mt-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
