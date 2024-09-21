@@ -1,3 +1,5 @@
+"use client";
+
 import { Github, Menu } from "lucide-react";
 
 import Border from "./header-border";
@@ -8,6 +10,7 @@ import Link from "next/link";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
+import useIsScrolled from "@/lib/is-scrolled-hook";
 
 const sizeVariants = {
   md: "h-16 md:h-20",
@@ -25,11 +28,14 @@ export const getHeaderPadding = () => headerPaddingVariants[variant];
 // ---------------------------
 
 const Header = () => {
+  const isScrolled = useIsScrolled();
+
   return (
     <header
       className={twMerge(
-        `w-full fixed top-0 z-20 flex justify-center items-center bg-black/50 backdrop-blur-md`,
+        `w-full fixed top-0 z-20 flex justify-center items-center backdrop-blur-md`,
         sizeVariants[variant],
+        isScrolled ? "bg-black/50" : "bg-transparent",
       )}
     >
       <Container className="w-full">

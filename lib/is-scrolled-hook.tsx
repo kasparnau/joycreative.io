@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 const useIsScrolled = () => {
@@ -17,7 +19,7 @@ const useIsScrolled = () => {
   }, []);
 
   useEffect(() => {
-    setIsScrolled(scrollPosition > 0);
+    setIsScrolled(scrollPosition > 50);
   }, [scrollPosition]);
 
   return isScrolled;
