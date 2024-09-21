@@ -1,3 +1,5 @@
+"use client";
+
 import Border from "./header-border";
 import { Button } from "@/components/button";
 import Container from "@/components/container";
@@ -8,42 +10,34 @@ import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
 
+// ? Explanation
+// The header is fixed position.
+// The purpose of this is to help page content start after the header.
+// I went with fixed instead of sticky due to limitations with filling the viewport.
 export const contentPaddingVariants = {
-  md: "pt-16 md:pt-24",
+  md: "pt-16 md:pt-20",
 };
-
-const variants = {
-  md: "h-16 md:h-24",
-};
-
-export const variant = "md";
-
-// 🤷🏻 Utility function to scale pages to occupy the remaining space of the viewport after the header.
-// We need to expose variants for Tailwind to generate utility classes.
-export const viewportVariants = {
-  md: `h-screen max-h-[1000px]`,
-};
-
 export const getHeaderPadding = () => contentPaddingVariants[variant];
 
-export function getViewportHeight() {
-  return viewportVariants[variant];
-}
+const sizeVariants = {
+  md: "h-16 md:h-20",
+};
+export const variant = "md";
 // ---------------------------
 
 const Header = () => {
   return (
     <header
       className={twMerge(
-        `w-full fixed top-0 z-20 flex justify-center items-center border-foreground/5 transition-colors`,
-        variants[variant],
+        `w-full fixed top-0 z-20 flex justify-center items-center bg-black/50 backdrop-blur-md`,
+        sizeVariants[variant],
       )}
     >
       <Container className="w-full">
         <div className={`flex justify-between lg:grid lg:grid-cols-3 w-full`}>
           <HomeButton className="justify-self-start flex items-center" />
           <div className="hidden lg:flex items-center justify-self-center">
-            <div className="border border-primary/10 rounded-full flex gap-6 px-7 py-2">
+            <div className="border border-primary/20 rounded-full flex gap-6 px-7 py-2">
               {headerLinks.map((headerLink) => (
                 <NavLink key={headerLink.url} href={headerLink.url}>
                   {headerLink.label}

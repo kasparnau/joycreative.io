@@ -53,7 +53,7 @@ const Transition = () => {
   return (
     <motion.div
       id="transition"
-      // Transition starts off with a black background to prevent screen flash from columns of boxes being rendered in.
+      // Transition starts off with a black background to prevent screen flash from transition loading phase.
       initial={{ backgroundColor: "hsl(0 0% 0%)" }}
       animate={{ backgroundColor: "hsl(0 0% 0% / 0%)" }}
       transition={{ duration: 0.1 }}
@@ -69,9 +69,12 @@ const Transition = () => {
 
 export default function Loader({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <Transition />
+    <>
+      {/* Page content */}
       {children}
-    </div>
+
+      {/* Skip page load transition in development environment. */}
+      {process.env.NODE_ENV !== "development" && <Transition />}
+    </>
   );
 }
