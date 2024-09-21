@@ -4,7 +4,7 @@ export default function HeroBackground() {
   return (
     <div
       style={{ backgroundImage: `url('${BackgroundLines.src}')` }}
-      className="absolute w-full h-full object-cover z-[-1]"
+      className="hidden lg:block absolute w-full h-full object-cover z-[-1]"
     />
   );
 }
