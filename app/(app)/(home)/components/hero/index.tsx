@@ -29,7 +29,7 @@ const Hero = () => {
   });
 
   return (
-    <div className={"w-full h-screen relative max-h-[1000px]"}>
+    <div className={"w-full h-screen relative max-h-[1200px]"}>
       <HeroBackground />
 
       <div
