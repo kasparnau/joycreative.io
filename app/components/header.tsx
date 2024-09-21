@@ -1,9 +1,10 @@
+import { Github, Menu } from "lucide-react";
+
 import Border from "./header-border";
 import { Button } from "@/components/button";
 import Container from "@/components/container";
 import HomeButton from "./header-home-button";
 import Link from "next/link";
-import { Menu } from "lucide-react";
 import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
@@ -49,15 +50,20 @@ const Header = () => {
 
           <div className="justify-self-end">
             {/* Contact button on desktop*/}
-            <Button
-              asChild
-              variant="glass"
-              className="hidden lg:block rounded-full"
-            >
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+            <div className="h-full items-center gap-4 hidden lg:flex">
+              <Link
+                href="https://github.com/kasparnau/joycreative.io"
+                target="_blank"
+              >
+                <Github className="text-muted-foreground hover:text-foreground transition-colors" />
+              </Link>
+
+              <Button asChild variant="glass" className="rounded-full">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
             {/* Hamburger menu for mobile */}
-            <div className="lg:hidden flex items-center justify-self-end">
+            <div className="lg:hidden flex items-center justify-self-end h-full">
               <Menu size={30} />
             </div>
           </div>
