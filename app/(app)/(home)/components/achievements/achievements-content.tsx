@@ -24,8 +24,11 @@ export default function AchievementsContent({
       {/* Glow. Animates into view on scroll. */}
       <AchievementsGlow opacity={opacity} />
 
-      <div className="w-full grid lg:grid-cols-5 gap-6 mt-16 relative bg-background">
-        <Card className="lg:col-span-5 h-96 md:h-auto">
+      <div className="w-full grid lg:grid-cols-5 gap-2 mt-16 relative bg-background">
+        <Card
+          className="lg:col-span-5 h-96 md:h-auto"
+          gradient="total_hours_played"
+        >
           <CardContent
             title="5,000,000+"
             description="Total Hours Played"
@@ -36,7 +39,7 @@ export default function AchievementsContent({
             <InteractiveEarth />
           </div>
         </Card>
-        <Card className="lg:col-span-3">
+        <Card className="lg:col-span-3" gradient="peak_monthly_active_users">
           <CardContent
             title="812,448"
             description="Peak Monthly Active Users"
@@ -44,7 +47,7 @@ export default function AchievementsContent({
           />
           <div className="absolute -bottom-28 lg:-bottom-20 right-[-75px]"></div>
         </Card>
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2" gradient="peak_concurrent_users">
           <CardContent
             title="9,665"
             description="Peak Concurrent Users"

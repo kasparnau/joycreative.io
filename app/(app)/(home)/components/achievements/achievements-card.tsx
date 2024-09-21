@@ -1,3 +1,7 @@
+import CardGlow, { cardGradientKey } from "./achievements-card-glow";
+
+import { useRef } from "react";
+
 export const CardContent = ({
   title,
   description,
@@ -25,23 +29,33 @@ export const CardContent = ({
 export const Card = ({
   children,
   className,
+  gradient,
 }: {
   children: React.ReactNode;
+  gradient: cardGradientKey;
   className?: string;
-}) => (
-  <div
-    className={`relative rounded-card group p-12 transition-all border border-muted overflow-hidden ${className}`}
-  >
-    {children}
-
-    {/* Smooth border effect on hover */}
+}) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  return (
     <div
-      className={`absolute transition-all left-0 top-[65%]
+      className={`relative rounded-card group z-0 transition-all border border-muted overflow-hidden ${className}`}
+      ref={cardRef}
+    >
+      {/* Card background */}
+      <CardGlow gradient={gradient} cardRef={cardRef} />
+
+      {/* Card content */}
+      <div className="p-12">{children}</div>
+
+      {/* Smooth border effect on hover */}
+      <div
+        className={`absolute transition-all left-0 top-[65%]
                 from-transparent via-primary to-transparent bg-gradient-to-b w-[2px] h-24
-                opacity-0 group-hover:opacity-100 group-hover:top-[20%]`}
-      style={{
-        transitionDuration: "400ms",
-      }}
-    />
-  </div>
-);
+                opacity-0 group-hover:opacity-100 group-hover:top-[10%]`}
+        style={{
+          transitionDuration: "400ms",
+        }}
+      />
+    </div>
+  );
+};
