@@ -28,7 +28,7 @@ const CallToAction = () => {
             Have a great idea & want to bring it to life? Drop a message — we'll
             help you out.
           </Headings.h3>
-          <div className="flex gap-2 mt-2">
+          <div className="flex gap-5 mt-2">
             <Button>Let's work together</Button>
             <Button variant="glass">Learn more</Button>
           </div>

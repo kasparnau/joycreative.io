@@ -24,7 +24,7 @@ export default function AchievementsContent({
       {/* Glow. Animates into view on scroll. */}
       <AchievementsGlow opacity={opacity} />
 
-      <div className="w-full grid lg:grid-cols-5 gap-2 mt-16 relative bg-background">
+      <div className="w-full grid lg:grid-cols-5 gap-5 mt-16 relative bg-background">
         <Card
           className="lg:col-span-5 h-96 md:h-auto"
           gradient="total_hours_played"

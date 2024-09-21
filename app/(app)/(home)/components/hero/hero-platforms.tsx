@@ -1,4 +1,6 @@
-import { MotionValue, motion } from "framer-motion";
+"use client";
+
+import { MotionValue, motion, useTransform } from "framer-motion";
 
 import Container from "@/components/container";
 import HeroPhone from "./hero-phone";
@@ -6,7 +8,6 @@ import Image from "next/image";
 import { data as glowData } from "./hero-glow";
 import { data as loaderData } from "@/app/components/page-transition";
 import platforms from "../../data/platforms";
-import { useOpacityTransform } from ".";
 
 const icons = platforms.map((platform, IDX) => (
   <Image
@@ -42,7 +43,7 @@ interface Props {
 
 const HeroBrands: React.FC<Props> = ({ springScrollProgress }) => {
   // Brand icons shouldn't be animated out.
-  const opacity = useOpacityTransform(springScrollProgress);
+  const opacity = useTransform(springScrollProgress, [0, 0.7], [1, 0]);
 
   return (
     <div className="w-full absolute bottom-0 z-[0]">

@@ -24,7 +24,7 @@ export default function Achievements() {
 
   return (
     <Container
-      className="w-full mt-64 mb-32 flex flex-col relative"
+      className="w-full mt-32 sm:mt-64 mb-16 sm:mb-32 flex flex-col relative"
       ref={containerRef}
     >
       <AchievementsHead />
