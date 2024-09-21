@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://joycreative.io" target="_blank" rel="noopener noreferrer">
-    <img alt="" src="https://github.com/user-attachments/assets/8fc10d87-774c-4290-84aa-7efedcbf5422"/>
+    <img alt="" src="https://github.com/user-attachments/assets/9604c8bc-7dd8-4e37-9b83-88de6b0854cc"/>
   </a>
 </p>
 
