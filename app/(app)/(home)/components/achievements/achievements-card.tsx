@@ -38,7 +38,7 @@ export const Card = ({
   const cardRef = useRef<HTMLDivElement>(null);
   return (
     <div
-      className={`relative rounded-card group z-0 transition-all border border-muted overflow-hidden ${className}`}
+      className={`relative rounded-card group z-0 transition-all border-2 border-muted overflow-hidden ${className}`}
       ref={cardRef}
     >
       {/* Card background */}
