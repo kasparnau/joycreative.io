@@ -19,9 +19,9 @@ const Footer = () => {
         {/* Logo */}
         <a href="./" className="flex flex-col gap-5">
           <Image alt="" src={Logo} width={20} />
-          <p className="text-md text-zinc-50 max-w-xs">
-            Independent creative studio building digital experiences and pushing
-            boundaries.
+          <p className="text-md text-zinc-50 max-w-sm">
+            Independent creative studio building immersive Metaverse experiences
+            for millions of players.
           </p>
         </a>
       </Container>
