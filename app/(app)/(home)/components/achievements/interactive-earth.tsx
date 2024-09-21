@@ -73,7 +73,7 @@ export default function Cobe() {
     offset: ["start end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
   const offset = useTransform(scrollYProgress, [0, 1], [0, 0], {
     ease: easings.easeInOutQuint,
   });
