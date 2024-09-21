@@ -5,8 +5,8 @@ import HeroPhone from "./hero-phone";
 import Image from "next/image";
 import { data as glowData } from "./hero-glow";
 import { data as loaderData } from "@/app/components/page-transition";
-import platforms from "../data/platforms";
-import { useOpacityTransform } from "./hero";
+import platforms from "../../data/platforms";
+import { useOpacityTransform } from ".";
 
 const icons = platforms.map((platform, IDX) => (
   <Image

@@ -7,10 +7,10 @@ import {
 } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import Glows from "./glow-components";
+import Glows from "../glow-components";
 import easings from "@/lib/easings";
 import { data as loaderData } from "@/app/components/page-transition";
-import { useOpacityTransform } from "./hero";
+import { useOpacityTransform } from ".";
 
 export const data = {
   animLength: 2,
