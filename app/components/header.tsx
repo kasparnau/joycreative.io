@@ -45,7 +45,7 @@ const Header = () => {
 
           {/* List of page links */}
           <div className="hidden lg:flex items-center justify-self-center">
-            <div className="border border-primary/20 rounded-full flex gap-6 px-7 py-2">
+            <div className="flex gap-6 px-7 py-2">
               {headerLinks.map((headerLink) => (
                 <NavLink key={headerLink.url} href={headerLink.url}>
                   {headerLink.label}
