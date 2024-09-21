@@ -1,3 +1,5 @@
+"use client";
+
 import { MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 
 import HeroBackground from "./hero-background";
