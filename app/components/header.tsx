@@ -33,7 +33,10 @@ const Header = () => {
     >
       <Container className="w-full">
         <div className={`flex justify-between lg:grid lg:grid-cols-3 w-full`}>
+          {/* Home button */}
           <HomeButton className="justify-self-start flex items-center" />
+
+          {/* List of page links */}
           <div className="hidden lg:flex items-center justify-self-center">
             <div className="border border-primary/20 rounded-full flex gap-6 px-7 py-2">
               {headerLinks.map((headerLink) => (
@@ -53,7 +56,7 @@ const Header = () => {
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
-            {/* Hamburger menu on mobile */}
+            {/* Hamburger menu for mobile */}
             <div className="lg:hidden flex items-center justify-self-end">
               <Menu size={30} />
             </div>
