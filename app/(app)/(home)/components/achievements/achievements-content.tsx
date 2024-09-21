@@ -4,6 +4,7 @@ import { Card, CardContent } from "./achievements-card";
 import { MotionValue, motion } from "framer-motion";
 
 import AchievementsGlow from "./achievements-glow";
+import InteractiveEarth from "./interactive-earth";
 
 export default function AchievementsContent({
   transform,
@@ -31,8 +32,8 @@ export default function AchievementsContent({
             fact="Over 1000 consecutive years of joy!"
             large
           />
-          <div className="h-full absolute -bottom-[150px] md:bottom-0 -z-10 opacity-100 md:opacity-100 -right-[180px] md:-right-[75px]">
-            {/* <InteractiveEarth /> */}
+          <div className="h-full w-[800px] absolute -bottom-[150px] md:bottom-0 opacity-100 md:opacity-100 -right-[180px] md:-right-[75px]">
+            <InteractiveEarth />
           </div>
         </Card>
         <Card className="lg:col-span-3">
@@ -52,8 +53,6 @@ export default function AchievementsContent({
 
           <div className="absolute bottom-[-75px] right-[-75px]"></div>
         </Card>
-        {/* <div className="col-span-3 h-64 border border-muted rounded-card"></div>
-        <div className="col-span-2 h-64 border border-muted rounded-card"></div> */}
       </div>
     </motion.div>
   );
