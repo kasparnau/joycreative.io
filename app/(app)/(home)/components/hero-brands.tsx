@@ -1,29 +1,23 @@
 import { MotionValue, motion } from "framer-motion";
 
 import Container from "@/components/container";
-import HandHoldingImg from "@/public/assets/hero/holding-phone.png";
 import HeroPhone from "./hero-phone";
 import Image from "next/image";
 import easings from "@/lib/easings";
 import platforms from "../data/platforms";
-import { useMemo } from "react";
 import { useOpacityTransform } from "./hero";
 
-const PlatformIcons = () => {
-  const icons = useMemo(
-    () =>
-      platforms.map((platform, IDX) => (
-        <Image
-          src={platform.Icon}
-          key={platform.label}
-          alt={`${platform.label} Icon`}
-          className="object-contain w-32 lg:w-48 invert"
-          quality={100}
-        />
-      )),
-    [],
-  );
+const icons = platforms.map((platform, IDX) => (
+  <Image
+    src={platform.Icon}
+    key={platform.label}
+    alt={`${platform.label} Icon`}
+    className="object-contain w-32 lg:w-40 invert"
+    quality={100}
+  />
+));
 
+const PlatformIcons = () => {
   return (
     <motion.div
       className="w-full absolute bottom-4 hidden lg:block z-[0]"
