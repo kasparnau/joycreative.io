@@ -8,11 +8,14 @@ export default function AchievementsGlow({
   opacity: MotionValue<number>;
 }) {
   return (
+    // Radial glow that fades into view on scroll
+    // The bottom half is masked out
     <motion.div
-      className="absolute w-full h-[800px] z-[-1] -top-72 pointer-events-none"
+      className="absolute w-full h-[800px] z-[-1] -top-24 pointer-events-none"
       style={{
         background:
-          "radial-gradient(55% 20% at 50% 50%, hsl(347 77% 50%) 0%, hsl(0 0% 0% / 0%) 100%)",
+          "radial-gradient(60% 50% at 50% 50%, hsl(347 77% 50%) 0%, hsl(0 0% 0% / 0%) 100%)",
+        mask: "linear-gradient(to top, rgb(0 0 0 / 0%) 50%, rgb(0 0 0) 100%)",
         opacity,
       }}
     />
