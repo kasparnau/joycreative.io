@@ -1,3 +1,5 @@
+"use client";
+
 import { useMotionTemplate, useScroll, useTransform } from "framer-motion";
 
 import AchievementsContent from "./achievements-content";

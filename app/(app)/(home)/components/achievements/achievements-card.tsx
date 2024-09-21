@@ -17,7 +17,7 @@ export const CardContent = ({
       <p className={`text-xl md:text-2xl mt-8 font-normal text-foreground`}>
         {description}
       </p>
-      <p className={`text-md mt-2 text-muted-foreground`}>{fact}</p>
+      <p className={`text-md mt-1 text-muted-foreground`}>{fact}</p>
     </div>
   );
 };
