@@ -9,7 +9,7 @@ const CallToAction = () => {
   return (
     <div
       id="collaborate"
-      className="w-full flex items-center justify-center overflow-hidden relative mt-64"
+      className="w-full flex items-center justify-center overflow-hidden relative mt-32"
     >
       {/* Layered Glow Effect */}
       {/* CTA should be on z-2 to be over the blur*/}
