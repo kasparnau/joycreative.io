@@ -1,11 +1,20 @@
 "use client";
 
+import { easings, useSpring } from "react-spring";
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { useEffect, useRef } from "react";
 
 import createGlobe from "cobe";
-import { useSpring } from "react-spring";
 
 export default function Cobe() {
+  // Interactive Globe from 5kB WebGL globe lib
+  // https://cobe.vercel.app/
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
@@ -57,14 +66,30 @@ export default function Cobe() {
       window.removeEventListener("resize", onResize);
     };
   }, []);
+
+  // Scroll Animations
+  const { scrollYProgress } = useScroll({
+    target: canvasRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const offset = useTransform(scrollYProgress, [0, 1], [0, 0], {
+    ease: easings.easeInOutQuint,
+  });
+  const rotation = useTransform(scrollYProgress, [0, 1], [0.1, -0.1]);
+
+  const motionTransform = useMotionTemplate`translateX(${offset}px) translateY(${offset}px) rotate(${rotation}turn) scale(${scale})`;
+
   return (
-    <div
+    <motion.div
       style={{
         width: "100%",
         maxWidth: 600,
         aspectRatio: 1,
         margin: "auto",
         position: "relative",
+        transform: motionTransform,
       }}
     >
       <canvas
@@ -108,6 +133,6 @@ export default function Cobe() {
           userSelect: "none",
         }}
       />
-    </div>
+    </motion.div>
   );
 }
