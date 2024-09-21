@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <header
       className={twMerge(
-        `w-full fixed top-0 z-20 flex justify-center items-center backdrop-blur-md`,
+        `w-full fixed top-0 z-20 flex justify-center items-center backdrop-blur-md transition-colors`,
         sizeVariants[variant],
         isScrolled ? "bg-black/50" : "bg-transparent",
       )}
