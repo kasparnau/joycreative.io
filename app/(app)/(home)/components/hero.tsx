@@ -2,7 +2,7 @@ import { MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 
 import HeroBackground from "./hero-background";
 import HeroBorder from "./hero-border";
-import HeroBrands from "./hero-brands";
+import HeroBrands from "./hero-platforms";
 import HeroContent from "./hero-content";
 import HeroGlow from "./hero-glow";
 import { getHeaderPadding } from "@/app/components/header";

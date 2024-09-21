@@ -3,7 +3,8 @@ import { MotionValue, motion } from "framer-motion";
 import Container from "@/components/container";
 import HeroPhone from "./hero-phone";
 import Image from "next/image";
-import easings from "@/lib/easings";
+import { data as glowData } from "./hero-glow";
+import { data as loaderData } from "@/app/components/page-transition";
 import platforms from "../data/platforms";
 import { useOpacityTransform } from "./hero";
 
@@ -12,7 +13,7 @@ const icons = platforms.map((platform, IDX) => (
     src={platform.Icon}
     key={platform.label}
     alt={`${platform.label} Icon`}
-    className="object-contain w-32 lg:w-40 invert"
+    className="object-contain w-20 lg:w-28 invert"
     quality={100}
   />
 ));
@@ -20,12 +21,15 @@ const icons = platforms.map((platform, IDX) => (
 const PlatformIcons = () => {
   return (
     <motion.div
-      className="w-full absolute bottom-4 hidden lg:block z-[0]"
+      className="w-full absolute bottom-4 hidden sm:block z-[0]"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.5 }}
-      transition={{ duration: 1, delay: 1, ease: easings.easeInOutQuint }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: glowData.animLength,
+        delay: loaderData.animLength,
+      }}
     >
-      <div className="flex items-center justify-start gap-16 flex-wrap">
+      <div className="flex items-center justify-start gap-4 md:gap-8 lg:gap-16 flex-wrap">
         {icons}
       </div>
     </motion.div>

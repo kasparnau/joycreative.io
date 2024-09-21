@@ -12,13 +12,15 @@ import easings from "@/lib/easings";
 import { data as loaderData } from "@/app/components/page-transition";
 import { useOpacityTransform } from "./hero";
 
+export const data = {
+  animLength: 2,
+};
+
 interface Props {
   springScrollProgress: MotionValue<any>;
 }
 
 const HeroGlow: React.FC<Props> = ({ springScrollProgress }) => {
-  const animLength = 2;
-
   // Initial animation on page load
   const controls = useAnimation();
   const [initialAnimationFinished, setInitialAnimationFinished] =
@@ -27,14 +29,14 @@ const HeroGlow: React.FC<Props> = ({ springScrollProgress }) => {
   useEffect(() => {
     controls.start({
       opacity: 1,
-      transition: { duration: animLength, delay: loaderData.animLength },
+      transition: { duration: data.animLength, delay: loaderData.animLength },
     });
 
     const timeout = setTimeout(
       () => {
         setInitialAnimationFinished(true);
       },
-      (loaderData.animLength + animLength) * 1000,
+      (loaderData.animLength + data.animLength) * 1000,
     );
 
     return () => clearTimeout(timeout);
@@ -59,7 +61,7 @@ const HeroGlow: React.FC<Props> = ({ springScrollProgress }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
-        duration: animLength,
+        duration: data.animLength,
         delay: loaderData.animLength,
         ease: easings.easeInOutQuint,
       }}
