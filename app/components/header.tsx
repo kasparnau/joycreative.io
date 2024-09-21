@@ -1,5 +1,3 @@
-"use client";
-
 import Border from "./header-border";
 import { Button } from "@/components/button";
 import Container from "@/components/container";
@@ -10,19 +8,19 @@ import NavLink from "./header-link";
 import headerLinks from "../data/header-links";
 import { twMerge } from "tailwind-merge";
 
-// ? Explanation
-// The header is fixed position.
-// The purpose of this is to help page content start after the header.
-// I went with fixed instead of sticky due to limitations with filling the viewport.
-export const contentPaddingVariants = {
-  md: "pt-16 md:pt-20",
-};
-export const getHeaderPadding = () => contentPaddingVariants[variant];
-
 const sizeVariants = {
   md: "h-16 md:h-20",
 };
 export const variant = "md";
+
+// ? Explanation
+// The header is fixed position.
+// The purpose of this is to help page content start after the header.
+// I went with fixed instead of sticky due to limitations with filling the viewport.
+export const headerPaddingVariants = {
+  md: "pt-16 md:pt-20",
+};
+export const getHeaderPadding = () => headerPaddingVariants[variant];
 // ---------------------------
 
 const Header = () => {
