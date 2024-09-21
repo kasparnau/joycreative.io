@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Joy Creative",
   description:
     "Joy Creative is an independent creative studio building digital experiences and pushing the boundaries of what's possible.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 const font = Outfit({ subsets: ["latin"] });
