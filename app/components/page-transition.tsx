@@ -73,8 +73,8 @@ export default function Loader({ children }: { children: React.ReactNode }) {
       {/* Page content */}
       {children}
 
-      {/* Page transition animation */}
-      <Transition />
+      {/* Skip page load transition during development. */}
+      {process.env.NODE_ENV !== "development" && <Transition />}
     </>
   );
 }
