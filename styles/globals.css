@@ -9,9 +9,9 @@
     --foreground: 0 0% 100%;
     --primary: 347 77% 50%;
     --card: 0 0% 5%;
-    --muted: 240 5% 26%;
+    --muted: 0 0% 20%;
     --muted-foreground: 240 5% 65%;
 
-    --border-radius-card: 0.5rem;
+    --border-radius-card: 1rem;
   }
 }
