@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       className={twMerge(
-        `w-full sticky top-0 z-20 flex justify-center items-center backdrop-blur-md transition-colors`,
+        `w-full sticky top-0 flex justify-center items-center backdrop-blur-md  transition-colors`,
         headerHeightVariants[headerHeightVariant],
       )}
     >

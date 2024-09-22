@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-form": "^0.1.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@studio-freight/react-lenis": "^0.0.47",
     "class-variance-authority": "^0.7.0",
