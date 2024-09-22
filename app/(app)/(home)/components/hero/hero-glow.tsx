@@ -11,8 +11,8 @@ import { useEffect, useState } from "react";
 
 import Glows from "../glow-components";
 import easings from "@/lib/easings";
-import { data as loaderData } from "@/app/components/page-transition";
-import { useOpacityTransform } from ".";
+import { data as loaderData } from "@/app/(layout)/components/page-transition";
+import { useOpacityTransform } from "./hero";
 
 export const data = {
   animLength: 2,

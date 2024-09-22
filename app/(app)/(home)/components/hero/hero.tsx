@@ -7,7 +7,7 @@ import HeroBorder from "./hero-border";
 import HeroBrands from "./hero-platforms";
 import HeroContent from "./hero-content";
 import HeroGlow from "./hero-glow";
-import { getViewportHeightWithoutHeader } from "@/app/components/header";
+import { getViewportHeightWithoutHeader } from "@/app/(layout)/components/header/header";
 import { twMerge } from "tailwind-merge";
 import { useRef } from "react";
 

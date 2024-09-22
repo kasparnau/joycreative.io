@@ -1,8 +1,8 @@
 import ConicalGradient from "./conical-gradient.jpg";
 import Container from "@/components/container";
 import Headings from "@/components/headings";
-import HeroBackground from "../../(home)/components/hero-background";
-import { getViewportHeightWithoutHeader } from "@/app/(layout)/components/header";
+import HeroBackground from "../../(home)/components/hero/hero-background";
+import { getViewportHeightWithoutHeader } from "@/app/(layout)/components/header/header";
 import { twMerge } from "tailwind-merge";
 
 const ThanksPage = () => {

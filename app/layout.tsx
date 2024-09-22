@@ -1,12 +1,12 @@
 import "@/styles/globals.css";
 import "lenis/dist/lenis.css";
 
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Loader from "./components/page-transition";
+import Footer from "./(layout)/components/footer/footer";
+import Header from "./(layout)/components/header/header";
+import Loader from "./(layout)/components/page-transition";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import SmoothScrolling from "./components/smooth-scroll";
+import SmoothScrolling from "./(layout)/components/smooth-scroll";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {

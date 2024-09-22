@@ -5,7 +5,7 @@ import FooterSvg from "@/public/assets/footer/footer-text.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/assets/company/logo.svg";
-import navLinks from "../data/nav-links";
+import navLinks from "../../data/nav-links";
 
 const NavLink = ({ name, url }: { name: string; url: string }) => (
   <Link

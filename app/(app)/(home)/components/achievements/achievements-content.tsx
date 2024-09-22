@@ -4,7 +4,7 @@ import { Card, CardContent } from "./achievements-card";
 import { MotionValue, motion } from "framer-motion";
 
 import AchievementsGlow from "./achievements-glow";
-import InteractiveEarth from "./interactive-earth";
+import InteractiveEarth from "./achievements-globe";
 
 export default function AchievementsContent({
   transform,

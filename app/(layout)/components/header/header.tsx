@@ -3,7 +3,7 @@ import {
   headerHeightVariant,
   headerHeightVariants,
   viewportHeightVariants,
-} from "../data/header";
+} from "../../data/header";
 
 import Border from "./header-border";
 import { Button } from "@/components/button";
@@ -12,7 +12,7 @@ import HeaderBackground from "./header-background";
 import HomeButton from "./header-home-button";
 import Link from "next/link";
 import NavLink from "./header-link";
-import navLinks from "../data/nav-links";
+import navLinks from "../../data/nav-links";
 import { twMerge } from "tailwind-merge";
 
 // ? Explanation
@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       className={twMerge(
-        `w-full sticky top-0 flex justify-center items-center backdrop-blur-md  transition-colors`,
+        `w-full sticky top-0 z-10 flex justify-center items-center backdrop-blur-md  transition-colors`,
         headerHeightVariants[headerHeightVariant],
       )}
     >
