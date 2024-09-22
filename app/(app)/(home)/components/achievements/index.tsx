@@ -19,19 +19,15 @@ export default function Achievements() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end 0.6"],
   });
 
-  const springScrollProgress = useSpring(scrollYProgress, {
-    damping: 3,
-  });
-
-  const yOffset = useTransform(scrollYProgress, [0, 0.3], [100, 0], {
+  const yOffset = useTransform(scrollYProgress, [0, 1], [50, 0], {
     ease: easings.easeInOutQuint,
   });
   const motionYOffset = useMotionTemplate`translateY(${yOffset}px)`;
 
-  const glowOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   //
 
   return (
