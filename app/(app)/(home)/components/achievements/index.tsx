@@ -19,10 +19,10 @@ export default function Achievements() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end 0.6"],
+    offset: ["start end", "end 0.9"],
   });
 
-  const yOffset = useTransform(scrollYProgress, [0, 1], [50, 0], {
+  const yOffset = useTransform(scrollYProgress, [0, 1], [25, 0], {
     ease: easings.easeInOutQuint,
   });
   const motionYOffset = useMotionTemplate`translateY(${yOffset}px)`;
