@@ -1,11 +1,9 @@
 import Container from "@/components/container";
 import React from "react";
-import { getHeaderPadding } from "@/app/components/header";
-import { twMerge } from "tailwind-merge";
 
 const TermsOfService = () => {
   return (
-    <div className={twMerge("w-full", getHeaderPadding())}>
+    <div className={"w-full py-32"}>
       <Container>
         <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
         <p className="text-sm text-muted-foreground mb-6">

@@ -1,10 +1,8 @@
 import Container from "@/components/container";
-import { getHeaderPadding } from "@/app/components/header";
-import { twMerge } from "tailwind-merge";
 
 export default function Privacy() {
   return (
-    <div className={twMerge("w-full", getHeaderPadding())}>
+    <div className={"w-full py-16"}>
       <Container>
         <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
         <p className="text-sm text-muted-foreground mb-6">
