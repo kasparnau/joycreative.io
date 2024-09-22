@@ -1,9 +1,9 @@
-import { boolean, integer, pgTable, text } from "drizzle-orm/pg-core";
+import { boolean, pgTable, serial, text } from "drizzle-orm/pg-core";
 
 import { sql } from "drizzle-orm";
 
 export const contactSubmissionsTable = pgTable("Contact Form Submissions", {
-  id: integer("id").primaryKey(),
+  id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
   message: text("message").notNull(),
