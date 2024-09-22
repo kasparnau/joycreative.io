@@ -30,11 +30,11 @@ export default function CardGlow({
 
 export const cardGradients = {
   total_hours_played:
-    "radial-gradient(100% 100% at 60% 100%, rgb(47 47 47) 0%, rgb(0, 0, 0) 100%)",
+    "radial-gradient(100% 100% at 60% 100%, rgb(47 47 47) 0%, rgb(14, 14, 14) 100%)",
   peak_monthly_active_users:
-    "radial-gradient(100% 100% at 100% 0%, rgb(47 47 47) 0%, rgb(0, 0, 0) 100%)",
+    "radial-gradient(100% 100% at 100% 0%, rgb(47 47 47) 0%, rgb(14, 14, 14) 100%)",
   peak_concurrent_users:
-    "radial-gradient(100% 100% at 0% 0%, rgb(47 47 47) 0%, rgb(0, 0, 0) 100%)",
+    "radial-gradient(100% 100% at 0% 0%, rgb(47 47 47) 0%, rgb(14, 14, 14) 100%)",
 };
 
 export type cardGradientKey = keyof typeof cardGradients;

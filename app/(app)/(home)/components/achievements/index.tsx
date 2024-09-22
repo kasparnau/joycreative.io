@@ -1,10 +1,16 @@
 "use client";
 
-import { useMotionTemplate, useScroll, useTransform } from "framer-motion";
+import {
+  useMotionTemplate,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 
 import AchievementsContent from "./achievements-content";
 import AchievementsHead from "./achievements-head";
 import Container from "@/components/container";
+import { easings } from "react-spring";
 import { useRef } from "react";
 
 export default function Achievements() {
@@ -16,10 +22,16 @@ export default function Achievements() {
     offset: ["start end", "end start"],
   });
 
-  const yOffset = useTransform(scrollYProgress, [0, 0.35], [100, 0]);
+  const springScrollProgress = useSpring(scrollYProgress, {
+    damping: 3,
+  });
+
+  const yOffset = useTransform(scrollYProgress, [0, 0.3], [100, 0], {
+    ease: easings.easeInOutQuint,
+  });
   const motionYOffset = useMotionTemplate`translateY(${yOffset}px)`;
 
-  const glowOpacity = useTransform(scrollYProgress, [0.1, 0.45], [0, 1]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
   //
 
   return (
