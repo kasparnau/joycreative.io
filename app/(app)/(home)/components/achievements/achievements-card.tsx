@@ -13,7 +13,9 @@ export const CardContent = ({
   fact: string;
   large?: boolean;
 }) => {
-  const titleSize = large ? "text-5xl md:text-6xl" : "text-4xl md:text-5xl";
+  const titleSize = large
+    ? "text-4xl sm:text-5xl md:text-6xl"
+    : "text-4xl md:text-5xl";
 
   return (
     <div className={`w-full flex flex-col z-10`}>

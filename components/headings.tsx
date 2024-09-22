@@ -8,7 +8,7 @@ type Config = { [key: string]: string };
 export type Heading = { children?: ReactNode; className?: string };
 
 const config: Config = {
-  h1: "text-5xl md:text-6xl font-medium text-foreground tracking-tight",
+  h1: "text-4xl sm:text-5xl md:text-6xl font-medium text-foreground tracking-tight",
   h2: "text-lg md:text-xl font-medium text-foreground",
   h3: "text-md md:text-lg text-muted-foreground leading-8",
 };
