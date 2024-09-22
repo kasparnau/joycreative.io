@@ -7,7 +7,7 @@ import HeaderBackground from "./header-background";
 import HomeButton from "./header-home-button";
 import Link from "next/link";
 import NavLink from "./header-link";
-import headerLinks from "../data/header-links";
+import navLinks from "../data/nav-links";
 import { twMerge } from "tailwind-merge";
 
 // ? Explanation
@@ -40,10 +40,10 @@ const Header = () => {
 
           {/* List of page links */}
           <div className="hidden lg:flex items-center justify-self-center">
-            <div className="flex gap-6 px-7 py-2">
-              {headerLinks.map((headerLink) => (
-                <NavLink key={headerLink.url} href={headerLink.url}>
-                  {headerLink.label}
+            <div className="flex gap-12 px-7 py-2">
+              {navLinks.map((navLink) => (
+                <NavLink key={navLink.url} href={navLink.url}>
+                  {navLink.label}
                 </NavLink>
               ))}
             </div>
