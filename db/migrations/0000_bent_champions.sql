@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS "Contact Form Submissions" (
-	"id" integer PRIMARY KEY NOT NULL,
+CREATE TABLE IF NOT EXISTS "contact_form_submissions" (
+	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	"email" text NOT NULL,
 	"message" text NOT NULL,

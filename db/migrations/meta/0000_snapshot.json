@@ -1,16 +1,16 @@
 {
-  "id": "8bf2534e-4292-43cc-9e0b-e3b9d79ac83d",
+  "id": "0c6ad1b6-2895-472b-8cb6-bb9028bcf590",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.Contact Form Submissions": {
-      "name": "Contact Form Submissions",
+    "public.contact_form_submissions": {
+      "name": "contact_form_submissions",
       "schema": "",
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "serial",
           "primaryKey": true,
           "notNull": true
         },

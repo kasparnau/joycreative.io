@@ -2,7 +2,7 @@
 
 import { InsertSubmission, contactSubmissionsTable } from "./schema";
 
-import { db } from "./drizzle";
+import db from "./drizzle";
 import { eq } from "drizzle-orm";
 
 export async function fetchUnreadSubmissions() {
