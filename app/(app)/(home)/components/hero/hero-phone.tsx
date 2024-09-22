@@ -7,7 +7,7 @@ import easings from "@/lib/easings";
 const HeroPhone = ({ opacity }: { opacity: MotionValue<number> }) => {
   return (
     <motion.div
-      className="h-[590px] absolute -bottom-12 right-0"
+      className="h-[540px] sm:h-[590px] absolute -bottom-12 right-0"
       initial={{ translateY: 50, opacity: 0 }}
       animate={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: easings.easeInOutQuint }}
