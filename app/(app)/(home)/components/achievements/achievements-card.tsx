@@ -19,7 +19,7 @@ export const CardContent = ({
 
   return (
     <div className={`w-full flex flex-col z-10`}>
-      <p className={`${titleSize} font-semibold text-foreground`}>{title}</p>
+      <p className={`${titleSize} text-foreground`}>{title}</p>
       <p className={`text-xl md:text-2xl mt-8 font-normal text-foreground`}>
         {description}
       </p>
