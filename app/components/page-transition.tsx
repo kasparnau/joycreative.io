@@ -74,7 +74,7 @@ export default function Loader({ children }: { children: React.ReactNode }) {
       {children}
 
       {/* Page load transition */}
-      <Transition />
+      {process.env.NODE_ENV !== "development" && <Transition />}
     </>
   );
 }

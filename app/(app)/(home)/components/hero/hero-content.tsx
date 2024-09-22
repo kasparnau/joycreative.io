@@ -9,9 +9,9 @@ interface Props {
 const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
   return (
     <Container className="pt-8 sm:pt-32 w-full flex items-center justify-center">
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col gap-2 text-5xl sm:text-7xl lg:text-[120px] font-bold">
         <motion.div
-          className="text-5xl sm:text-7xl lg:text-[120px] font-bold"
+          className=""
           transition={{ duration: 0.3, ease: easings.easeInOutQuint }}
           initial={{ translateX: -1000, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1 }}
@@ -19,7 +19,7 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           We make games
         </motion.div>
         <motion.div
-          className="text-5xl sm:text-7xl lg:text-[120px] font-bold relative lg:left-[25%]"
+          className="relative lg:left-[25%]"
           initial={{
             translateX: 1000,
             opacity: 0,
@@ -31,7 +31,8 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           people love.
         </motion.div>
         <motion.div
-          className="text-md md:text-lg max-w-md text-muted-foreground relative lg:left-[30%] xl:left-[40%] mt-12"
+          className={`relative lg:left-[30%] xl:left-[40%] mt-12
+                      font-normal text-md md:text-xl max-w-md text-muted-foreground`}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

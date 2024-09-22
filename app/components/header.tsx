@@ -59,7 +59,11 @@ const Header = () => {
                 <Github className="text-muted-foreground hover:text-foreground transition-colors" />
               </Link>
 
-              <Button asChild variant="glass" className="rounded-full">
+              <Button
+                asChild
+                variant="glass"
+                className="rounded-full bg-primary font-semibold"
+              >
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
