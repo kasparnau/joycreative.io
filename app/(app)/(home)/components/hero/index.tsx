@@ -41,7 +41,9 @@ const Hero = () => {
         ref={containerRef}
       >
         <HeroContent springScrollProgress={springScrollProgress} />
-        <HeroGlow springScrollProgress={springScrollProgress} />
+        <div className="opacity-30">
+          <HeroGlow springScrollProgress={springScrollProgress} />
+        </div>
         <HeroBrands springScrollProgress={springScrollProgress} />
         <HeroBorder scrollYProgress={scrollYProgress} />
       </div>

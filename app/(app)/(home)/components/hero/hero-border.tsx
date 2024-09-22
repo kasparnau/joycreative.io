@@ -19,7 +19,7 @@ const HeroBorder: React.FC<Props> = ({ scrollYProgress }) => {
   return (
     <div className="w-full absolute bottom-0 flex justify-center">
       <motion.div
-        className="h-[1px] bg-gradient-to-r from-transparent via-rose-500/30 to-transparent"
+        className="h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent"
         style={{ width: borderWidth }}
       />
     </div>

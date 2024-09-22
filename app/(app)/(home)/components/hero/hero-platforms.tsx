@@ -14,7 +14,7 @@ const icons = platforms.map((platform, IDX) => (
     src={platform.Icon}
     key={platform.label}
     alt={`${platform.label} Icon`}
-    className="object-contain w-20 lg:w-28 invert"
+    className="object-contain w-20 lg:w-24 invert"
     quality={100}
   />
 ));
@@ -30,7 +30,7 @@ const PlatformIcons = () => {
         delay: loaderData.animLength,
       }}
     >
-      <div className="flex items-center justify-start gap-4 md:gap-8 lg:gap-16 flex-wrap">
+      <div className="flex items-center justify-start gap-4 md:gap-8 lg:gap-24 flex-wrap">
         {icons}
       </div>
     </motion.div>
