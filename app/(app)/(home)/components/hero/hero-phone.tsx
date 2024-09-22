@@ -1,6 +1,6 @@
 import { MotionValue, motion } from "framer-motion";
 
-import HandHoldingImg from "@/public/assets/hero/holding-phone.png";
+import HandHoldingImg from "@/public/assets/hero/hero-phone.png";
 import Image from "next/image";
 import easings from "@/lib/easings";
 
