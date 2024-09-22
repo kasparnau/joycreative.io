@@ -7,7 +7,7 @@ import HeroBorder from "./hero-border";
 import HeroBrands from "./hero-platforms";
 import HeroContent from "./hero-content";
 import HeroGlow from "./hero-glow";
-import { getHeaderPadding } from "@/app/components/header";
+import { getViewportHeightWithoutHeader } from "@/app/components/header";
 import { twMerge } from "tailwind-merge";
 import { useRef } from "react";
 
@@ -29,14 +29,14 @@ const Hero = () => {
   });
 
   return (
-    <div className={"w-full h-screen relative max-h-[1200px]"}>
+    <div className={"w-full h-screen max-h-[1200px]"}>
       <HeroBackground />
 
       <div
         // Minimum height accounting for the header navbar height of 80px
         className={twMerge(
           "h-full flex flex-col relative overflow-hidden",
-          getHeaderPadding(),
+          getViewportHeightWithoutHeader(),
         )}
         ref={containerRef}
       >

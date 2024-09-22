@@ -1,4 +1,9 @@
 import { Github, Menu } from "lucide-react";
+import {
+  headerHeightVariant,
+  headerHeightVariants,
+  viewportHeightVariants,
+} from "../data/header";
 
 import Border from "./header-border";
 import { Button } from "@/components/button";
@@ -11,24 +16,18 @@ import navLinks from "../data/nav-links";
 import { twMerge } from "tailwind-merge";
 
 // ? Explanation
-// I went with fixed instead of sticky positioning for the header due to some limitations.
-// This helper function lets us pad page content to start after the header.
-export const headerPaddingVariants = {
-  md: "pt-16 md:pt-20",
-};
-export const getHeaderPadding = () => headerPaddingVariants[variant];
+// Helper function to help scale hero content to occupy the full viewport space after this header.
+// Configuration is located ../data/header.ts
+export const getViewportHeightWithoutHeader = () =>
+  viewportHeightVariants[headerHeightVariant];
 
-const sizeVariants = {
-  md: "h-16 md:h-20",
-};
-export const variant = "md";
-
+// Header
 const Header = () => {
   return (
     <header
       className={twMerge(
-        `w-full fixed top-0 z-20 flex justify-center items-center backdrop-blur-md transition-colors`,
-        sizeVariants[variant],
+        `w-full sticky top-0 z-20 flex justify-center items-center backdrop-blur-md transition-colors`,
+        headerHeightVariants[headerHeightVariant],
       )}
     >
       <HeaderBackground />

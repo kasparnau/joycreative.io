@@ -13,6 +13,7 @@
     "db:studio": "pnpm exec drizzle-kit studio --config ./db/drizzle.config.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@studio-freight/react-lenis": "^0.0.47",
     "class-variance-authority": "^0.7.0",
@@ -27,8 +28,10 @@
     "postgres": "^3.4.4",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "react-hook-form": "^7.53.0",
     "react-spring": "^9.7.4",
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
