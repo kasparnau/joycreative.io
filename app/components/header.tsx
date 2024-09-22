@@ -11,9 +11,8 @@ import navLinks from "../data/nav-links";
 import { twMerge } from "tailwind-merge";
 
 // ? Explanation
-// The header is fixed position.
-// The purpose of this is to help page content start after the header.
-// I went with fixed instead of sticky due to limitations with filling the viewport.
+// I went with fixed instead of sticky positioning for the header due to some limitations.
+// This helper function lets us pad page content to start after the header.
 export const headerPaddingVariants = {
   md: "pt-16 md:pt-20",
 };
