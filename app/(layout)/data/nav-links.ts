@@ -5,7 +5,6 @@ export interface NavLink {
 
 const navLinks: NavLink[] = [
   { url: "/", label: "Home" },
-  { url: "/games", label: "Games" },
   { url: "/contact", label: "Support" },
 ];
 
