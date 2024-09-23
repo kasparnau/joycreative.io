@@ -13,6 +13,7 @@ Disclaimer: This is not a template, boilerplate or a framework.
 - [💻 Development](#-development)
 - [🔐 Issues](#-issues)
 - [🧪 Pull Requests](#-pull-requests)
+- [💬 Conventional Commits](#-conventional-commits)
 
 ## 🔍 Requirements
 
@@ -76,3 +77,17 @@ If you're working on some improvents or a bug fix, feel free to create a pull re
 3. Make changes in accordance with our Prettier and Commitlint configuration.
 4. Push your changes to your forked repository.
 5. Open a pull request from your branch to our `main` branch.
+
+## 💬 Conventional Commits
+
+We follow the [Conventional Commits](conventionalcommits.org) specification for commit messages. This helps with maintaining a cohesive and explicit commit history.
+
+All commit messages should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
