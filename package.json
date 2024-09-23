@@ -14,6 +14,7 @@
     "db:studio": "pnpm exec drizzle-kit studio --config ./db/drizzle.config.ts"
   },
   "dependencies": {
+    "@commitlint/config-conventional": "^19.5.0",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-form": "^0.1.0",
     "@radix-ui/react-label": "^2.1.0",
