@@ -11,7 +11,7 @@ Disclaimer: This is not a template, boilerplate or a framework.
 - [🤔 Table of Contents:](#-table-of-contents)
 - [🔍 Requirements](#-requirements)
 - [💻 Development](#-development)
-- [🔐 Issues](#-issues)
+- [⚠️ Issues](#️-issues)
 - [🧪 Pull Requests](#-pull-requests)
 - [💬 Conventional Commits](#-conventional-commits)
 
@@ -64,7 +64,7 @@ pnpm run db:migrate
 pnpm dev
 ```
 
-## 🔐 Issues
+## ⚠️ Issues
 
 If you wish to report a bug, or have suggestions, feel free to [create an issue](https://github.com/kasparnau/joycreative.io/issues). Remember to include a clear and descriptive title, along with your message and potential reproduction steps.
 
