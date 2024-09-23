@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev --turbo",
-    "build": "next build && pnpm tsx ./db/migrate.ts",
+    "build": "next build && pnpm tsx db/migrate.ts",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
@@ -49,6 +50,7 @@
     "postcss": "^8.4.47",
     "prettier": "3.3.3",
     "tailwindcss": "^3.4.11",
+    "tsx": "^4.19.1",
     "typescript": "^5"
   },
   "lint-staged": {
