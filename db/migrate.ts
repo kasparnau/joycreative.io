@@ -10,6 +10,8 @@ const main = async () => {
     console.log("🎉 Database migration completed!");
   } catch (error) {
     console.error("❌ Database migration failed:\n", error);
+  } finally {
+    process.exit(0);
   }
 };
 
