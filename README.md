@@ -16,16 +16,18 @@
 ## ✨ Features
 
 - ⚡️ Next.js 15 RC with Turbopack
-- 🍿 Animation - Framer Motion
-- 💄 Code Formatting - Prettier
-- 🔨 Commit Convention - Husky & Commitlint
-- 🎨 Styling - Tailwind CSS & Class Variance Authority
+- 🤖 Development Environment - Docker
+- 🔍 Database - PostgreSQL & Drizzle ORM
+- 📫 Contact Form - React Hook Form & Zod
 - 🌈 UI Components - Radix Primitives
+- 🍿 Animation - Framer Motion
+- 🎨 Styling - Tailwind CSS & CVA
+- 💄 Code Formatting - Prettier
+- 🔨 Commit Linting - Husky & Commitlint
 
-## 🔍 Requirements
+## ⚙️ Development
 
-- Node, recommended `>=22.8.0`
-- pnpm, recommended `>=9.10.0`
+Please refer to the [Development & Contribution Guidelines](./CONTRIBUTING.md) for in-depth information on starting a development environment and contributing to the project.
 
 ## 🤖 Credits
 
