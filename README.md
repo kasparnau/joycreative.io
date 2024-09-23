@@ -11,7 +11,7 @@
   <img alt="" src="https://img.shields.io/github/license/kasparnau/joycreative.io?style=for-the-badge&labelColor=000">
 </p>
 
-👋 Welcome to the monorepo for the marketing website of Joy Creative
+👋 Welcome to the monorepo for the marketing website of Joy Creative.
 
 ## ✨ Features
 
@@ -27,8 +27,14 @@
 
 ## ⚙️ Development
 
-Please refer to the [Development & Contribution Guidelines](./CONTRIBUTING.md) for in-depth information on starting a development environment and contributing to the project.
+Please visit [Development & Contribution Guidelines](./CONTRIBUTING.md) for information on starting a development environment and contributing to this project.
 
-## 🤖 Credits
+## 📖 Author
 
-Made with ❤️ by Kaspar
+Made with ❤️ by [Kaspar](https://github.com/kasparnau).
+
+## ✍️ License
+
+This project is open source and licensed under the [GNU GENERAL PUBLIC LICENSE 3.0](./LICENSE).
+
+Do not deploy this directly to production. This project is not a template, boilerplate or a framework.
