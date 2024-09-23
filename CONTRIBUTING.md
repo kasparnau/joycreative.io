@@ -8,7 +8,6 @@ Disclaimer: This is not a template, boilerplate or a framework.
 
 ## 🤔 Table of Contents:
 
-- [🤔 Table of Contents:](#-table-of-contents)
 - [🔍 Requirements](#-requirements)
 - [💻 Development](#-development)
 - [⚠️ Issues](#️-issues)
@@ -70,7 +69,7 @@ If you wish to report a bug, or have suggestions, feel free to [create an issue]
 
 ## 🧪 Pull Requests
 
-If you're working on some improvents or a bug fix, feel free to create a pull request by following these steps:
+If you're working on some improvements or a bug fix, please create a pull request by following these steps:
 
 1. Fork the repository.
 2. Create a new branch with a clear and descriptive name.
