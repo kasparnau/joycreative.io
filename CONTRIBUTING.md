@@ -80,7 +80,7 @@ If you're working on some improvents or a bug fix, feel free to create a pull re
 
 ## 💬 Conventional Commits
 
-We follow the [Conventional Commits](conventionalcommits.org) specification for commit messages. This helps with maintaining a cohesive and explicit commit history.
+We follow the [Conventional Commits](https://conventionalcommits.org) specification for commit messages. This helps with maintaining a cohesive and explicit commit history.
 
 All commit messages should be structured as follows:
 
