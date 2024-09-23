@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17rc1
+    container_name: joycreative_db
+    environment:
+      POSTGRES_USER: development
+      POSTGRES_DB: joycreative
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
