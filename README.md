@@ -29,12 +29,12 @@
 
 Please visit [Development & Contribution Guidelines](./CONTRIBUTING.md) for information on starting a development environment and contributing to this project.
 
-## 📖 Author
-
-Made with ❤️ by [Kaspar](https://github.com/kasparnau).
-
 ## ✍️ License
 
 This project is open source and licensed under the [GNU GENERAL PUBLIC LICENSE 3.0](./LICENSE).
 
 Do not deploy this directly to production. This project is not a template, boilerplate or a framework.
+
+## 📖 Author
+
+Made with ❤️ by [Kaspar](https://github.com/kasparnau).
