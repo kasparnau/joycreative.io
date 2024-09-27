@@ -31,7 +31,7 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           people love.
         </motion.div>
         <motion.div
-          className={`relative lg:left-[30%] xl:left-[40%] mt-12
+          className={`relative lg:left-[30%] xl:left-[37%] mt-12
                       font-normal text-base sm:text-lg md:text-xl max-w-md text-muted-foreground`}
           initial="hidden"
           whileInView="visible"
@@ -42,8 +42,8 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
             hidden: { opacity: 0 },
           }}
         >
-          Independent creative studio building immersive Metaverse experiences
-          for millions of players.
+          Independent studio connecting millions of people around the world
+          through Metaverse experiences.
         </motion.div>
       </div>
     </Container>

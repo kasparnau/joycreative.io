@@ -35,8 +35,8 @@ const Footer = () => {
         <a href="./" className="flex flex-col gap-5">
           <Image alt="" src={Logo} width={20} />
           <p className="text-md text-zinc-50 max-w-sm">
-            Independent creative studio building immersive Metaverse experiences
-            for millions of players.
+            Independent studio connecting millions of people around the world
+            through Metaverse experiences.
           </p>
         </a>
 
