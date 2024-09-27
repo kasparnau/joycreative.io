@@ -2,6 +2,7 @@
 
 import easings from "@/lib/easings";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export const data = {
   animLength: 2,
@@ -74,7 +75,9 @@ export default function Loader({ children }: { children: React.ReactNode }) {
       {children}
 
       {/* Page load transition */}
-      {process.env.NODE_ENV !== "development" && <Transition />}
+      {!Boolean(process.env.NEXT_PUBLIC_FLAG_SKIP_PAGE_TRANSITION) && (
+        <Transition />
+      )}
     </>
   );
 }
