@@ -35,7 +35,7 @@ export default function AchievementsContent({
             fact="Over 1000 consecutive years of joy!"
             large
           />
-          <div className="h-full w-[800px] absolute -bottom-[150px] md:bottom-[30px] opacity-100 md:opacity-100 -right-[180px] md:-right-[75px]">
+          <div className="h-full w-[500px] absolute bottom-[-150px] md:bottom-[-10px] opacity-100 md:opacity-100 right-[-180px] md:right-[50px]">
             <InteractiveEarth />
           </div>
         </Card>
