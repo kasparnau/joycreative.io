@@ -39,22 +39,22 @@ export default function Cobe() {
       devicePixelRatio: 2,
       width: width * 2,
       height: width * 2,
-      phi: 2.7,
-      theta: 0.3,
+      phi: 5.2,
+      theta: 0.28,
       dark: 1,
       diffuse: 2,
       mapSamples: 16000,
-      mapBrightness: 3,
-      baseColor: [0.5, 0.5, 0.5],
+      mapBrightness: 5,
+      baseColor: [0.7, 0.7, 0.7],
       markerColor: [0.882, 0.114, 0.282],
-      glowColor: [0.3, 0.3, 0.3],
+      glowColor: [0.4, 0.4, 0.4],
       markers: [
         { location: [60.1699, 24.9384], size: 0.05 }, //* HELSINKI
       ],
       onRender: (state) => {
-        state.phi = r.get();
-        state.width = width * 2;
-        state.height = width * 2;
+        // state.phi = r.get();
+        // state.width = width * 2;
+        // state.height = width * 2;
       },
     });
     setTimeout(() => {
@@ -94,42 +94,42 @@ export default function Cobe() {
     >
       <canvas
         ref={canvasRef}
-        onPointerDown={(e) => {
-          pointerInteracting.current =
-            e.clientX - pointerInteractionMovement.current;
-          canvasRef.current && (canvasRef.current.style.cursor = "grabbing");
-        }}
-        onPointerUp={() => {
-          pointerInteracting.current = null;
-          canvasRef.current && (canvasRef.current.style.cursor = "grab");
-        }}
-        onPointerOut={() => {
-          pointerInteracting.current = null;
-          canvasRef.current && (canvasRef.current.style.cursor = "grab");
-        }}
-        onMouseMove={(e) => {
-          if (pointerInteracting.current !== null) {
-            const delta = e.clientX - pointerInteracting.current;
-            pointerInteractionMovement.current = delta;
-            void api.start({
-              r: delta / 200,
-            });
-          }
-        }}
-        onTouchMove={(e) => {
-          if (pointerInteracting.current !== null && e.touches[0]) {
-            const delta = e.touches[0].clientX - pointerInteracting.current;
-            pointerInteractionMovement.current = delta;
-            void api.start({
-              r: delta / 100,
-            });
-          }
-        }}
+        // onPointerDown={(e) => {
+        //   pointerInteracting.current =
+        //     e.clientX - pointerInteractionMovement.current;
+        //   canvasRef.current && (canvasRef.current.style.cursor = "grabbing");
+        // }}
+        // onPointerUp={() => {
+        //   pointerInteracting.current = null;
+        //   canvasRef.current && (canvasRef.current.style.cursor = "grab");
+        // }}
+        // onPointerOut={() => {
+        //   pointerInteracting.current = null;
+        //   canvasRef.current && (canvasRef.current.style.cursor = "grab");
+        // }}
+        // onMouseMove={(e) => {
+        //   if (pointerInteracting.current !== null) {
+        //     const delta = e.clientX - pointerInteracting.current;
+        //     pointerInteractionMovement.current = delta;
+        //     void api.start({
+        //       r: delta / 200,
+        //     });
+        //   }
+        // }}
+        // onTouchMove={(e) => {
+        //   if (pointerInteracting.current !== null && e.touches[0]) {
+        //     const delta = e.touches[0].clientX - pointerInteracting.current;
+        //     pointerInteractionMovement.current = delta;
+        //     void api.start({
+        //       r: delta / 100,
+        //     });
+        //   }
+        // }}
         style={{
           width: "100%",
           height: "100%",
           contain: "layout paint size",
-          cursor: "auto",
+          // cursor: "auto",
           userSelect: "none",
         }}
       />
