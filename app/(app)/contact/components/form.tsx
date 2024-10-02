@@ -33,7 +33,7 @@ const defaultValues: z.infer<typeof formSchema> = {
   name: "",
   email: "",
   message: "",
-  topic: "development",
+  topic: "support",
 };
 
 interface ContactFormProps {
