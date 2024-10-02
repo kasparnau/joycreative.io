@@ -37,10 +37,10 @@ const defaultValues: z.infer<typeof formSchema> = {
 };
 
 interface ContactFormProps {
-  setSubbmited: Dispatch<SetStateAction<boolean>>;
+  setSubmitted: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function ContactForm({ setSubbmited }: ContactFormProps) {
+export default function ContactForm({ setSubmitted }: ContactFormProps) {
   const [isPending, startTransition] = useTransition();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -54,7 +54,7 @@ export default function ContactForm({ setSubbmited }: ContactFormProps) {
 
       if (result.ok) {
         form.reset();
-        setSubbmited(true);
+        setSubmitted(true);
       } else {
         console.log(result);
       }

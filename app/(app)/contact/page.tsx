@@ -22,7 +22,7 @@ export default function ContactPage() {
           style={{ background: radialBackground }}
         >
           <Header />
-          <Form setSubbmited={setSubmitted} />
+          <Form setSubmitted={setSubmitted} />
         </div>
       </Container>
     </main>
