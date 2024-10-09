@@ -1,4 +1,4 @@
-import { Github, Menu } from "lucide-react";
+import { Github, Menu, Twitter } from "lucide-react";
 import {
   headerHeightVariant,
   headerHeightVariants,
@@ -50,6 +50,9 @@ const Header = () => {
           <div className="justify-self-end">
             {/* Contact button on desktop*/}
             <div className="h-full items-center gap-4 hidden lg:flex">
+              <Link href="https://x.com/joycreativex" target="_blank">
+                <Twitter className="text-muted-foreground hover:text-foreground transition-colors" />
+              </Link>
               <Link
                 href="https://github.com/kasparnau/joycreative.io"
                 target="_blank"
