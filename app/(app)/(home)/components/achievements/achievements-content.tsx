@@ -30,9 +30,9 @@ export default function AchievementsContent({
           gradient="total_hours_played"
         >
           <CardContent
-            title="5,000,000+"
-            description="Total Hours Played"
-            fact="Over 1000 consecutive years of joy!"
+            title="32,200,000+"
+            description="Total Minutes Played"
+            fact="Over 32 million minutes of joy."
             large
           />
           <div className="h-full w-[500px] absolute bottom-[-150px] md:bottom-[-10px] opacity-100 md:opacity-100 right-[-180px] md:right-[50px]">
@@ -41,9 +41,9 @@ export default function AchievementsContent({
         </Card>
         <Card className="lg:col-span-3" gradient="peak_monthly_active_users">
           <CardContent
-            title="812,448"
-            description="Peak Monthly Active Users"
-            fact="More than the population of Iceland!"
+            title="818,385"
+            description="Total Plays"
+            fact="Players from all around the world!"
           />
           <div className="absolute -bottom-28 lg:-bottom-20 right-[-75px]"></div>
         </Card>
@@ -51,7 +51,7 @@ export default function AchievementsContent({
           <CardContent
             title="9,665"
             description="Peak Concurrent Users"
-            fact="Enough to fill 46 Boeing 737s!"
+            fact="That's a stadium sized audience!"
           />
 
           <div className="absolute bottom-[-75px] right-[-75px]"></div>
