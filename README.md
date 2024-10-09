@@ -19,6 +19,7 @@
 - 🤖 Development Environment - Docker
 - 🔍 Database - PostgreSQL & Drizzle ORM
 - 📫 Contact Form - React Hook Form & Zod
+- 🎁 Aggregate Emails - Cron & React Email
 - 🌈 UI Components - Radix Primitives
 - 🍿 Animation - Framer Motion
 - 🎨 Styling - Tailwind CSS & CVA
