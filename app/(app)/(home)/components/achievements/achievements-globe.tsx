@@ -44,10 +44,10 @@ export default function Cobe() {
       dark: 1,
       diffuse: 2,
       mapSamples: 16000,
-      mapBrightness: 5,
+      mapBrightness: 2,
       baseColor: [0.7, 0.7, 0.7],
       markerColor: [0.882, 0.114, 0.282],
-      glowColor: [0.4, 0.4, 0.4],
+      glowColor: [0.0, 0.0, 0.0],
       markers: [
         { location: [60.1699, 24.9384], size: 0.05 }, //* HELSINKI
       ],
