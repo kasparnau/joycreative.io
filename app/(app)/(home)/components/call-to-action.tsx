@@ -4,6 +4,7 @@ import CtaGraphic from "@/public/assets/cta/cta-graphic.svg";
 import Glows from "./glow-components";
 import Headings from "@/components/headings";
 import Image from "next/image";
+import Link from "next/link";
 
 const CallToAction = () => {
   return (
@@ -29,8 +30,12 @@ const CallToAction = () => {
             help you out.
           </Headings.h3>
           <div className="flex gap-5 mt-2">
-            <Button>Let's work together</Button>
-            <Button variant="glass">Learn more</Button>
+            <Button asChild>
+              <Link href="/contact">Let's work together</Link>
+            </Button>
+            <Button asChild variant="glass">
+              <Link href="/contact">Learn more</Link>
+            </Button>
           </div>
         </div>
 
