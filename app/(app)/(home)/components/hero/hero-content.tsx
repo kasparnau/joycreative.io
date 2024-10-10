@@ -42,8 +42,8 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
             hidden: { opacity: 0 },
           }}
         >
-          Independent studio connecting millions of people around the world
-          through Metaverse experiences.
+          Independent studio connecting hundreds of thousands of people around
+          the world through UGC games.
         </motion.div>
       </div>
     </Container>
