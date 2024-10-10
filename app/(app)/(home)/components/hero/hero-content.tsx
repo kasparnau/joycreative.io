@@ -46,6 +46,7 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           Independent studio connecting hundreds of thousands of people around
           the world through UGC games.
         </motion.div>
+        {/* Separate platform icons element for small displays, inline with other content */}
         <PlatformIcons className="sm:hidden mt-12" />
       </div>
     </Container>

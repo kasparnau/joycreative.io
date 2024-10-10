@@ -3,10 +3,9 @@ import "lenis/dist/lenis.css";
 
 import Footer from "./(layout)/components/footer/footer";
 import Header from "./(layout)/components/header/header";
-import Loader from "./(layout)/components/page-transition";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import SmoothScrolling from "./(layout)/components/smooth-scroll";
+import Providers from "./(layout)/components/providers";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
@@ -33,13 +32,11 @@ export default function RootLayout({
           font.className,
         )}
       >
-        <SmoothScrolling>
-          <Loader>
-            <Header />
-            {children}
-            <Footer />
-          </Loader>
-        </SmoothScrolling>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
