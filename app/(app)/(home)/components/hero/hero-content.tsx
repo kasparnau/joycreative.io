@@ -1,6 +1,7 @@
 import { MotionValue, motion } from "framer-motion";
 
 import Container from "@/components/container";
+import { PlatformIcons } from "./hero-platforms";
 import easings from "@/lib/easings";
 
 interface Props {
@@ -45,6 +46,7 @@ const HeroContent: React.FC<Props> = ({ springScrollProgress }) => {
           Independent studio connecting hundreds of thousands of people around
           the world through UGC games.
         </motion.div>
+        <PlatformIcons className="sm:hidden mt-12" />
       </div>
     </Container>
   );
