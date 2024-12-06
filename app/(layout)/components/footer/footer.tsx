@@ -32,11 +32,14 @@ const Footer = () => {
       {/* Footer Content */}
       <Container className="w-full mt-8 flex flex-col md:flex-row md:justify-between">
         {/* Logo */}
-        <a href="./" className="flex flex-col gap-5">
-          <Image alt="" src={Logo} width={20} />
-          <p className="text-md text-zinc-50 max-w-sm">
+        <a href="./" className="flex flex-col">
+          <Image alt="Home" src={Logo} width={20} />
+          <p className="text-md text-zinc-50 max-w-sm mt-5">
             Independent studio connecting hundreds of thousands of people around
             the world through UGC games.
+          </p>
+          <p className="text-sm mt-5 max-w-sm">
+            Joy Creative, 3434228-7. All rights reserved.
           </p>
         </a>
 
