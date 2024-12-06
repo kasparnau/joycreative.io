@@ -26,8 +26,8 @@ const CallToAction = () => {
             collaborate?
           </Headings.h1>
           <Headings.h3 className="max-w-sm">
-            Have a great idea & want to bring it to life? Drop a message — we'll
-            help you out.
+            Have a great idea & want to bring it to life? Drop a message — we're
+            open to collaborate.
           </Headings.h3>
           <div className="flex gap-5 mt-2">
             <Button asChild>
